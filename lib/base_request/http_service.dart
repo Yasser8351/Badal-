@@ -10,7 +10,7 @@ class HttpService {
     dio = Dio(BaseOptions(
       baseUrl: ApiUrl.root,
       headers: {
-        // "XApiKey": "pgH7QzFHJx4w46fI~5Uzi4RvtTwlEXp",
+        "XApiKey": "pgH7QzFHJx4w46fI~5Uzi4RvtTwlEXp",
         // "": token,
       },
     ));

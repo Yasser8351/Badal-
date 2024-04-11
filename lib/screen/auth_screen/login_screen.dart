@@ -1,8 +1,9 @@
 import 'package:badal/controller/auth_controller/auth_controller.dart';
 import 'package:badal/screen/auth_screen/sign_up_screen.dart';
 import 'package:badal/screen/tab_screen/tab_screen.dart';
-import 'package:badal/utilits/app_image.dart';
+import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
+import 'package:badal/widget/shared_widgets/logo_app.dart';
 import 'package:badal/widget/shared_widgets/my_button.dart';
 import 'package:badal/widget/shared_widgets/my_text.dart';
 import 'package:badal/widget/shared_widgets/text_faild_input.dart';
@@ -28,12 +29,13 @@ class LoginScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     verticalSpaceXXXLarge,
-                    Hero(
+                    const Hero(
                       tag: "logo",
-                      child: Image.asset(
-                        AppImage.logo,
-                        height: Get.height * .17,
-                      ),
+                      child: LogoApp(),
+                      // child: Image.asset(
+                      //   AppImage.logo,
+                      //   height: Get.height * .17,
+                      // ),
                     ),
                     verticalSpaceMedium,
                     MyText.h5(AppConfig.login.tr),
@@ -88,7 +90,7 @@ class LoginScreen extends StatelessWidget {
                           MyText.h6(AppConfig.dontHaveAccount.tr,
                               color: Colors.grey),
                           horizontalSpaceLargTiny,
-                          MyText.h6(AppConfig.register.tr, color: Colors.black),
+                          MyText.h6(AppConfig.register.tr, color: kcPrimary),
                         ],
                       ),
                     ),

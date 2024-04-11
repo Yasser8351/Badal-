@@ -6,6 +6,7 @@ enum LoadingState {
   timeout,
   noDataFound,
   error,
+  empty,
 }
 
 enum ShimmerType {

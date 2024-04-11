@@ -29,6 +29,8 @@ const kcAccentColorSwatch = MaterialColor(0xffF9D3E7, {
 const kcPrimary = Color(0xffD973AB);
 const kcAccent = Color(0xffF9D3E7);
 const kcAccentDark = Color(0xffEB81B3);
+const kcAccentLight = Color(0xffF9ECF3);
+// const kcAccentLight = Color(0xffFBEAF3);
 
 /////////////////////////////////////
 const Color kGrey = Color(0xffFCFCFC);
@@ -53,6 +55,8 @@ final lightTheme = ThemeData(
   ),
 
   hoverColor: const Color.fromARGB(255, 212, 212, 212),
+  // primaryIconTheme: const IconThemeData(color: kcPrimary),
+
   indicatorColor: Colors.white,
   dividerColor: Colors.grey,
   textTheme: const TextTheme(

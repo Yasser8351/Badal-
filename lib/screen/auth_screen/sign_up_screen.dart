@@ -1,7 +1,8 @@
 import 'package:badal/controller/auth_controller/auth_controller.dart';
 import 'package:badal/screen/auth_screen/login_screen.dart';
-import 'package:badal/utilits/app_image.dart';
+import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
+import 'package:badal/widget/shared_widgets/logo_app.dart';
 import 'package:badal/widget/shared_widgets/my_button.dart';
 import 'package:badal/widget/shared_widgets/my_text.dart';
 import 'package:badal/widget/shared_widgets/text_faild_input.dart';
@@ -27,25 +28,28 @@ class SignUpScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     verticalSpaceXXXLarge,
-                    Hero(
+                    const Hero(
                       tag: "logo",
-                      child: Image.asset(
-                        AppImage.logo,
-                        height: Get.height * .17,
-                      ),
+                      child: LogoApp(),
+                      // child: Image.asset(
+                      //   AppImage.logo,
+                      //   height: Get.height * .17,
+                      // ),
                     ),
                     verticalSpaceMedium,
                     MyText.h5(AppConfig.register.tr),
                     verticalSpaceMedium,
                     GetBuilder<AuthController>(
                       builder: (controller) => TextFaildInput(
-                        label: AppConfig.name.tr,
+                        label: AppConfig.fullName.tr,
                         controller: authController.nameController,
                         trailingIcon: const Padding(
                           padding: EdgeInsets.symmetric(horizontal: 18),
-                          child: Icon(Icons.person_3_outlined),
+                          child: Icon(
+                            Icons.person_3_outlined,
+                          ),
                         ),
-                        hint: AppConfig.name.tr,
+                        hint: AppConfig.fullName.tr,
                       ),
                     ),
                     verticalSpaceMedium,
@@ -99,7 +103,7 @@ class SignUpScreen extends StatelessWidget {
                           MyText.h6(AppConfig.alreadyHaveAccount.tr,
                               color: Colors.grey),
                           horizontalSpaceLargTiny,
-                          MyText.h6(AppConfig.login.tr, color: Colors.black),
+                          MyText.h6(AppConfig.login.tr, color: kcPrimary),
                         ],
                       ),
                     ),

@@ -124,17 +124,22 @@ class TextFaildInput extends StatelessWidget {
             onFieldSubmitted: null,
             keyboardType: inputType,
             textInputAction: inputAction,
-
             maxLength: maxLength,
             maxLines: maxLines ?? 1,
             style: Theme.of(context).textTheme.bodyLarge,
             textDirection: textDirection,
             maxLengthEnforcement: MaxLengthEnforcement.enforced,
             validator: validationMessages,
-
             enableInteractiveSelection: enableInteractiveSelection,
-
             decoration: InputDecoration(
+              prefixIconColor: MaterialStateColor.resolveWith((states) =>
+                  states.contains(MaterialState.focused)
+                      ? kcPrimary
+                      : Colors.grey),
+              suffixIconColor: MaterialStateColor.resolveWith((states) =>
+                  states.contains(MaterialState.focused)
+                      ? kcPrimary
+                      : Colors.grey),
               helperStyle: Theme.of(context).textTheme.labelSmall,
               prefixIcon: leadingIcon,
               prefixText: leadingText,

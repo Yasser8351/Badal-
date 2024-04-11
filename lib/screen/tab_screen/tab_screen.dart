@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:badal/screen/auth_screen/sign_up_screen.dart';
 import 'package:badal/screen/tab_screen/chat_screen.dart';
 import 'package:badal/screen/tab_screen/favorite_screen.dart';
 import 'package:badal/screen/tab_screen/home_screen.dart';
@@ -20,11 +23,21 @@ class TabScreen extends StatefulWidget {
 
 class _TabScreenState extends State<TabScreen> {
   DateTime timeBackPressed = DateTime.now();
+  bool isLogin = true;
 
   void _navigateBottomBar(int index) {
     setState(() {
       widget.selectIndex = index;
     });
+    // if (widget.selectIndex == 1 && isLogin) {
+    //   loginFirst();
+    // }
+  }
+
+  loginFirst() {
+    showMySnackbar(title: "يجب عليك تسجيل الدخول اولا");
+    Timer(
+        const Duration(seconds: 3), () => Get.off(() => const SignUpScreen()));
   }
 
   @override
@@ -53,6 +66,7 @@ class _TabScreenState extends State<TabScreen> {
               child: Scaffold(
                 body: pages[widget.selectIndex],
                 bottomNavigationBar: BottomNavigationBar(
+                  backgroundColor: kcAccentLight,
                   selectedIconTheme:
                       const IconThemeData(color: kcPrimary, size: 26),
                   type: BottomNavigationBarType.fixed,

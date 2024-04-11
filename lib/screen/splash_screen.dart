@@ -1,8 +1,7 @@
 import 'dart:async';
 import 'package:badal/screen/tab_screen/tab_screen.dart';
-import 'package:badal/utilits/app_config.dart';
 import 'package:badal/utilits/app_theme.dart';
-import 'package:badal/widget/shared_widgets/my_text.dart';
+import 'package:badal/widget/shared_widgets/logo_app.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -31,14 +30,9 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: Get.width * .16),
-          child: Hero(
+          child: const Hero(
             tag: "logo",
-            child: CircleAvatar(
-              radius: Get.width * .19,
-              foregroundColor: kcPrimary,
-              backgroundColor: kcPrimary,
-              child: MyText.h5(AppConfig.appName.tr, color: Colors.white),
-            ),
+            child: LogoApp(),
           ),
         ),
       ),
