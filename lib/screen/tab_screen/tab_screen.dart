@@ -1,4 +1,7 @@
+import 'package:badal/screen/tab_screen/chat_screen.dart';
+import 'package:badal/screen/tab_screen/favorite_screen.dart';
 import 'package:badal/screen/tab_screen/home_screen.dart';
+import 'package:badal/screen/tab_screen/setting_screen.dart';
 import 'package:badal/utilits/app_config.dart';
 import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
@@ -8,10 +11,8 @@ import 'package:get/get.dart';
 
 // ignore: must_be_immutable
 class TabScreen extends StatefulWidget {
-  TabScreen({Key? key, this.selectIndex = 0, this.show = true})
-      : super(key: key);
+  TabScreen({Key? key, this.selectIndex = 0}) : super(key: key);
   int selectIndex;
-  bool show;
 
   @override
   State<TabScreen> createState() => _TabScreenState();
@@ -33,11 +34,10 @@ class _TabScreenState extends State<TabScreen> {
 
   final List<Widget> pages = [
     const HomeScreen(),
+    const FavoriteScreen(),
     const HomeScreen(),
-    const HomeScreen(),
-    const HomeScreen(),
-    const HomeScreen(),
-    // const SettingScreen(),
+    const ChatScreen(),
+    const SettingScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -65,16 +65,17 @@ class _TabScreenState extends State<TabScreen> {
                         label: AppConfig.home.tr,
                         backgroundColor: kcAccent),
                     BottomNavigationBarItem(
-                      icon: const Icon(CupertinoIcons.add_circled),
-                      label: AppConfig.home.tr,
+                      icon: const Icon(CupertinoIcons.heart),
+                      label: AppConfig.favorite.tr,
                     ),
                     BottomNavigationBarItem(
-                      icon: Icon(CupertinoIcons.add_circled, size: px32),
-                      label: AppConfig.home.tr,
+                      icon: Icon(CupertinoIcons.add_circled_solid,
+                          size: px50, color: kcPrimary),
+                      label: "",
                     ),
                     BottomNavigationBarItem(
-                      icon: const Icon(Icons.payment),
-                      label: AppConfig.home.tr,
+                      icon: const Icon(CupertinoIcons.chat_bubble),
+                      label: AppConfig.chat.tr,
                     ),
                     BottomNavigationBarItem(
                       icon: const Icon(Icons.settings),
