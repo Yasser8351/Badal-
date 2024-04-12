@@ -17,6 +17,19 @@ class AppConfig {
   static const String settings = "Settings";
   static const String searchHint = "search";
 
+  /// Setting Screen
+  static const String notifications = "Notifications";
+  static const String version = "version";
+  static const String buildNumber = "1.0.0";
+  static const String termsOfServices = "Terms of service";
+  static const String privacyPolicy = "Privacy Policy";
+  static const String paymentFeesSubscriptions =
+      "Payment of fees and subscriptions";
+  static const String logout = "Logout";
+  static const String faq = "FAQ";
+  static const String support = "Support";
+  static const String language = "Language";
+
   static const String timeOut = "Your internet connection seems to be weak.";
   static const String tryAgain = "Try Again";
   static const String noInternet = "No internet connection";

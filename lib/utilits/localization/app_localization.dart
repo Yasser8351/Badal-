@@ -26,7 +26,16 @@ class AppLocalization implements Translations {
           AppConfig.curancy: "ريال",
           AppConfig.tryAgain: "اعادة المحاولة",
           AppConfig.somthimgWroing: "حدث خطأ",
-
+          AppConfig.notifications: "الاشعارات",
+          AppConfig.version: "الاصدار",
+          AppConfig.buildNumber: AppConfig.buildNumber,
+          AppConfig.termsOfServices: "الشروط والأحكام",
+          AppConfig.privacyPolicy: "سياسة الخصوصية",
+          AppConfig.faq: "الأسئلة الشائعة",
+          AppConfig.paymentFeesSubscriptions: "سداد الرسوم والاشتراكات",
+          AppConfig.logout: "تسجيل الخروج",
+          AppConfig.language: "اللغة",
+          AppConfig.support: "الدعم الفني",
           ///////////////////////////////////////////////
           AppConfig.resetPassword: "استعادة كلمة المرور"
         },
@@ -37,7 +46,9 @@ class AppLocalization implements Translations {
           AppConfig.chat: AppConfig.chat,
           AppConfig.profile: AppConfig.profile,
           AppConfig.settings: AppConfig.settings,
+          AppConfig.support: AppConfig.support,
           AppConfig.email: AppConfig.email,
+          AppConfig.notifications: AppConfig.notifications,
           AppConfig.tryAgain: AppConfig.tryAgain,
           AppConfig.fullName: AppConfig.fullName,
           AppConfig.password: AppConfig.password,
@@ -47,11 +58,21 @@ class AppLocalization implements Translations {
           AppConfig.alreadyHaveAccount: AppConfig.alreadyHaveAccount,
           AppConfig.searchHint: AppConfig.searchHint,
           AppConfig.curancy: AppConfig.curancy,
+          AppConfig.language: AppConfig.language,
 
           AppConfig.timeOut: AppConfig.timeOut,
           AppConfig.noInternet: AppConfig.noInternet,
           AppConfig.noDataFound: AppConfig.noDataFound,
           AppConfig.somthimgWroing: AppConfig.somthimgWroing,
+
+          AppConfig.version: AppConfig.version,
+          AppConfig.buildNumber: AppConfig.buildNumber,
+          AppConfig.termsOfServices: AppConfig.termsOfServices,
+          AppConfig.privacyPolicy: AppConfig.privacyPolicy,
+          AppConfig.faq: AppConfig.faq,
+          AppConfig.paymentFeesSubscriptions:
+              AppConfig.paymentFeesSubscriptions,
+          AppConfig.logout: AppConfig.logout,
 
           ///////////////////////////////////////////////
           AppConfig.resetPassword: AppConfig.resetPassword

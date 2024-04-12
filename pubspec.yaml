@@ -47,6 +47,10 @@ dependencies:
   cached_network_image: ^3.2.0
   #  Shimmer Loading
   shimmer: ^2.0.0
+  # Convert price with or without currency & formatter
+  money_formatter: ^0.0.5
+  # converts a date into a humanized text. Instead of showing a date
+  get_time_ago: ^1.2.5
 
 dev_dependencies:
   flutter_test:

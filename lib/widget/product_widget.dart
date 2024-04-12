@@ -9,6 +9,9 @@ import 'package:badal/widget/shared_widgets/my_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_time_ago/get_time_ago.dart';
+import 'package:money_formatter/money_formatter.dart';
+// import 'package:timeago/timeago.dart' as timeago;
 
 class ProductWidget extends StatelessWidget {
   const ProductWidget({
@@ -19,12 +22,16 @@ class ProductWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    MoneyFormatterOutput priceFormatter = MoneyFormatter(
+        amount: double.parse(
+      productsModel.price.toString(),
+    )).output;
+
+    final dateTime = DateTime.now();
+
     return Align(
       alignment: Alignment.centerRight,
       child: CardBorder(
-        // decoration: const BoxDecoration(
-        //     color: Colors.white,
-        //     borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Padding(
           padding: EdgeInsetsDirectional.only(top: px10, bottom: px10),
           child: Row(
@@ -37,6 +44,7 @@ class ProductWidget extends StatelessWidget {
                   children: [
                     MyText.h6(productsModel.name,
                         color: kcPrimary,
+                        fontSize: px18,
                         fontWeight: FontWeight.bold,
                         maxLines: 3,
                         padding: EdgeInsetsDirectional.only(start: px5)),
@@ -45,9 +53,11 @@ class ProductWidget extends StatelessWidget {
                       children: [
                         Icon(CupertinoIcons.time,
                             color: Colors.grey, size: px18),
-                        MyText.h6("قبل 1 دقيقة",
-                            padding: EdgeInsetsDirectional.only(
-                                start: Get.height * .0038)),
+                        MyText.h6(
+                          GetTimeAgo.parse(dateTime, locale: 'ar'),
+                          padding: EdgeInsetsDirectional.only(
+                              start: Get.height * .0038),
+                        ),
                       ],
                     ),
                     verticalSpaceRegular,
@@ -72,7 +82,7 @@ class ProductWidget extends StatelessWidget {
                           ),
                           horizontalSpaceRegular,
                           MyText.h6(
-                            "${productsModel.price} ${AppConfig.curancy.tr}",
+                            "${priceFormatter.nonSymbol} ${AppConfig.curancy.tr}",
                             color: kcPrimary,
                             fontSize: px20,
                             fontWeight: FontWeight.w600,
