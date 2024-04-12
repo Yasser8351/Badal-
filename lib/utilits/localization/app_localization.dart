@@ -34,8 +34,10 @@ class AppLocalization implements Translations {
           AppConfig.faq: "الأسئلة الشائعة",
           AppConfig.paymentFeesSubscriptions: "سداد الرسوم والاشتراكات",
           AppConfig.logout: "تسجيل الخروج",
-          AppConfig.language: "اللغة",
+          AppConfig.sitePolicies: "سياسات الموقع",
           AppConfig.support: "الدعم الفني",
+          AppConfig.shareApp: "مشاركة التطبيق",
+          AppConfig.language: "اللغة",
           ///////////////////////////////////////////////
           AppConfig.resetPassword: "استعادة كلمة المرور"
         },
@@ -59,6 +61,8 @@ class AppLocalization implements Translations {
           AppConfig.searchHint: AppConfig.searchHint,
           AppConfig.curancy: AppConfig.curancy,
           AppConfig.language: AppConfig.language,
+          AppConfig.sitePolicies: AppConfig.sitePolicies,
+          AppConfig.shareApp: AppConfig.shareApp,
 
           AppConfig.timeOut: AppConfig.timeOut,
           AppConfig.noInternet: AppConfig.noInternet,

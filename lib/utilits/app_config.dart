@@ -28,6 +28,8 @@ class AppConfig {
   static const String logout = "Logout";
   static const String faq = "FAQ";
   static const String support = "Support";
+  static const String shareApp = "Share the app";
+  static const String sitePolicies = "Site Policies";
   static const String language = "Language";
 
   static const String timeOut = "Your internet connection seems to be weak.";
