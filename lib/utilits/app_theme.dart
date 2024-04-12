@@ -40,7 +40,7 @@ const Color kcGreyLight = Color(0xffADADAD);
 const Color kcGreyVeryLight = Color(0xFFF5F5F5);
 
 final lightTheme = ThemeData(
-  // fontFamily: 'Changa',
+  fontFamily: 'markazi',
   iconTheme: const IconThemeData(size: 24.0, color: Colors.black87),
   splashColor: kcPrimary,
   dialogTheme: DialogTheme(

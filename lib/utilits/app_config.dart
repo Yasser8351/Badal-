@@ -21,6 +21,8 @@ class AppConfig {
   static const String tryAgain = "Try Again";
   static const String noInternet = "No internet connection";
   static const String noDataFound = "No data found";
+  static const String somthimgWroing = "Somthimg wroing";
 
-  static const String curancy = "\$";
+  static const String curancy = "SRC";
+  // static const String curancy = "\$";
 }

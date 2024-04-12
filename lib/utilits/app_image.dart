@@ -7,5 +7,6 @@ class AppImage {
   static const suv = "$_root/suv.png";
   static const motorcycle = "$_root/motorcycle.png";
   static const truck = "$_root/truck.png";
+  static const placeholder = "$_root/placeholder.png";
   static const yasser = "$_root/yasser.jpg";
 }

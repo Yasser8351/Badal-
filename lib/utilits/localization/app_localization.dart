@@ -23,6 +23,9 @@ class AppLocalization implements Translations {
           AppConfig.timeOut: "يبدو ان اتصال الانترنت لديك ضعيف",
           AppConfig.noInternet: "لايوجد اتصال بالانترنت",
           AppConfig.noDataFound: "لايوجد بيانات",
+          AppConfig.curancy: "ريال",
+          AppConfig.tryAgain: "اعادة المحاولة",
+          AppConfig.somthimgWroing: "حدث خطأ",
 
           ///////////////////////////////////////////////
           AppConfig.resetPassword: "استعادة كلمة المرور"
@@ -35,6 +38,7 @@ class AppLocalization implements Translations {
           AppConfig.profile: AppConfig.profile,
           AppConfig.settings: AppConfig.settings,
           AppConfig.email: AppConfig.email,
+          AppConfig.tryAgain: AppConfig.tryAgain,
           AppConfig.fullName: AppConfig.fullName,
           AppConfig.password: AppConfig.password,
           AppConfig.login: AppConfig.login,
@@ -42,9 +46,12 @@ class AppLocalization implements Translations {
           AppConfig.dontHaveAccount: AppConfig.dontHaveAccount,
           AppConfig.alreadyHaveAccount: AppConfig.alreadyHaveAccount,
           AppConfig.searchHint: AppConfig.searchHint,
+          AppConfig.curancy: AppConfig.curancy,
+
           AppConfig.timeOut: AppConfig.timeOut,
           AppConfig.noInternet: AppConfig.noInternet,
           AppConfig.noDataFound: AppConfig.noDataFound,
+          AppConfig.somthimgWroing: AppConfig.somthimgWroing,
 
           ///////////////////////////////////////////////
           AppConfig.resetPassword: AppConfig.resetPassword

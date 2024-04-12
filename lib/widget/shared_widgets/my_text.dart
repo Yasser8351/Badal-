@@ -11,11 +11,13 @@ class MyText extends StatelessWidget {
   final double? fontSize;
   final FontWeight? fontWeight;
   final TextDirection? textDirection;
+  final EdgeInsetsGeometry? padding;
   const MyText.h1(this.text,
       {Key? key,
       this.color,
       this.textAlign,
       this.maxLines,
+      this.padding,
       this.softWrap,
       this.overflow,
       this.fontSize,
@@ -28,6 +30,7 @@ class MyText extends StatelessWidget {
       this.color,
       this.textAlign,
       this.maxLines,
+      this.padding,
       this.softWrap,
       this.overflow,
       this.fontSize,
@@ -40,6 +43,7 @@ class MyText extends StatelessWidget {
       this.color,
       this.textAlign,
       this.maxLines,
+      this.padding,
       this.softWrap,
       this.fontSize,
       this.overflow,
@@ -52,6 +56,7 @@ class MyText extends StatelessWidget {
       this.color,
       this.textAlign,
       this.maxLines,
+      this.padding,
       this.softWrap,
       this.fontSize,
       this.overflow,
@@ -65,6 +70,7 @@ class MyText extends StatelessWidget {
       this.textAlign,
       this.maxLines,
       this.fontSize,
+      this.padding,
       this.softWrap,
       this.overflow,
       this.fontWeight,
@@ -76,6 +82,7 @@ class MyText extends StatelessWidget {
       this.color,
       this.textAlign,
       this.maxLines,
+      this.padding,
       this.softWrap,
       this.fontSize = 16,
       this.overflow,
@@ -89,6 +96,7 @@ class MyText extends StatelessWidget {
       this.textAlign,
       this.fontSize,
       this.maxLines,
+      this.padding,
       this.softWrap,
       this.overflow,
       this.fontWeight,
@@ -100,6 +108,7 @@ class MyText extends StatelessWidget {
       this.color,
       this.textAlign,
       this.maxLines,
+      this.padding,
       this.softWrap,
       this.overflow,
       this.fontSize,
@@ -113,6 +122,7 @@ class MyText extends StatelessWidget {
       this.textAlign,
       this.maxLines,
       this.fontSize,
+      this.padding,
       this.softWrap,
       this.overflow,
       this.fontWeight,
@@ -124,6 +134,7 @@ class MyText extends StatelessWidget {
       this.color,
       this.textAlign,
       this.maxLines,
+      this.padding,
       this.softWrap,
       this.overflow,
       this.fontSize,
@@ -137,6 +148,7 @@ class MyText extends StatelessWidget {
       this.textAlign,
       this.fontSize,
       this.maxLines,
+      this.padding,
       this.softWrap,
       this.overflow,
       this.fontWeight,
@@ -149,6 +161,7 @@ class MyText extends StatelessWidget {
       this.textAlign,
       this.maxLines,
       this.fontSize,
+      this.padding,
       this.softWrap,
       this.overflow,
       this.fontWeight,
@@ -161,6 +174,7 @@ class MyText extends StatelessWidget {
       this.textAlign,
       this.fontSize,
       this.maxLines,
+      this.padding,
       this.softWrap,
       this.overflow,
       this.fontWeight,
@@ -169,14 +183,17 @@ class MyText extends StatelessWidget {
         super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: _getTextTheme(context),
-      maxLines: maxLines,
-      softWrap: softWrap,
-      overflow: overflow,
-      textDirection: textDirection,
-      textAlign: textAlign,
+    return Padding(
+      padding: padding ?? const EdgeInsets.all(0.0),
+      child: Text(
+        text,
+        style: _getTextTheme(context),
+        maxLines: maxLines,
+        softWrap: softWrap,
+        overflow: overflow,
+        textDirection: textDirection,
+        textAlign: textAlign,
+      ),
     );
   }
 

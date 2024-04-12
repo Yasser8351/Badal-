@@ -18,6 +18,4 @@ enum ShimmerType {
   none
 }
 
-enum LoadingType {
-  login,
-}
+enum LoadingType { login, none }

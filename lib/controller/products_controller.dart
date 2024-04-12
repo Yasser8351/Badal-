@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:badal/controller/my_controller.dart';
 import 'package:badal/controller/products_services.dart';
 import 'package:badal/utilits/api_url.dart';
 import 'package:badal/utilits/methode_helper.dart';
@@ -10,8 +11,9 @@ import 'package:badal/utilits/all_enum.dart';
 
 // import '../../models/home_model/products_by_id.dart';
 
-class ProductsController extends GetxController {
+class ProductsController extends MyController {
   ProductsServices productsServices = ProductsServices();
+  @override
   LoadingState loadingState = LoadingState.initial;
   LoadingState loadingState2 = LoadingState.initial;
   LoadingState loadingStateProduct = LoadingState.initial;
@@ -20,9 +22,11 @@ class ProductsController extends GetxController {
   List<Products> listProducts = [];
   TextEditingController searchTextProduct = TextEditingController();
   TextEditingController searchTextOffers = TextEditingController();
-
+  @override
   String errorMessage = "";
+  @override
   int pageNumber = 0;
+  @override
   int pageSize = 5;
 
   ProductsModel productsModel = ProductsModel(
@@ -227,18 +231,19 @@ class ProductsController extends GetxController {
 
   // searchProduct
   searchProduct() async {
-    changeLoadingState(LoadingState.loading);
+    changeLoadingState(LoadingState.loading, LoadingType.none);
     try {
       productsModel.products = await productsServices
           .searchProduct(searchTextProduct.text)
           .timeout(const Duration(seconds: ApiUrl.timeLimit));
 
-      changeLoadingState(LoadingState.loaded);
+      changeLoadingState(LoadingState.loaded, LoadingType.none);
     } catch (error) {
       log("error $error");
       handlingCatchError(
         error: error,
-        changeLoadingState: () => changeLoadingState(LoadingState.error),
+        changeLoadingState: () =>
+            changeLoadingState(LoadingState.error, LoadingType.none),
         errorMessageUpdate: (message) => errorMessageUpdate(message),
       );
     }
@@ -249,8 +254,8 @@ class ProductsController extends GetxController {
     update();
   }
 
-  changeLoadingState(LoadingState state,
-      {dynamic key = '', dynamic value = ''}) {
+  @override
+  changeLoadingState(LoadingState state, LoadingType loadingType) {
     loadingState = state;
     update();
   }

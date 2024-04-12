@@ -1,5 +1,7 @@
 // import 'package:cached_network_image/cached_network_image.dart';
+import 'package:badal/utilits/app_image.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 // import 'package:real_estate/utilits/app_image.dart';
@@ -43,9 +45,25 @@ class ImageApp extends StatelessWidget {
     } else if (image.contains("http") || image.contains("https")) {
       return InkWell(
         onTap: onTap,
-        child: Image.asset(
-          alignment: alignment ?? AlignmentDirectional.center,
-          image,
+        child: CachedNetworkImage(
+          errorWidget: (context, url, error) => Image.asset(
+            alignment: alignment ?? AlignmentDirectional.center,
+            AppImage.placeholder,
+            width: width ?? px32,
+            height: height ?? px32,
+          ),
+          alignment: Alignment.center,
+          // alignment: alignment ?? AlignmentDirectional.center,
+          imageUrl: image,
+          placeholder: (context, url) => Center(
+            child: FadeInImage(
+              placeholder: const AssetImage(AppImage.placeholder),
+              image: const AssetImage(AppImage.placeholder),
+              width: width ?? px32,
+              height: height ?? px32,
+              fit: fit,
+            ),
+          ),
           width: width ?? px32,
           height: height ?? px32,
         ),
@@ -59,7 +77,7 @@ class ImageApp extends StatelessWidget {
           imageUrl: image,
           placeholder: (context, url) => Center(
             child: FadeInImage(
-              placeholder: AssetImage(AppImage.logo),
+              placeholder: AssetImage(AppImage.placeholder),
               image: AssetImage(AppImage.logo),
               width: double.infinity,
               height: 120,
