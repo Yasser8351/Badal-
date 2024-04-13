@@ -1,5 +1,4 @@
 import 'package:badal/model/products_model.dart';
-import 'package:badal/utilits/api_url.dart';
 import 'package:badal/utilits/app_config.dart';
 import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
@@ -42,7 +41,8 @@ class ProductWidget extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    MyText.h6(productsModel.name,
+                    MyText.h6("فستان تركي للبيع",
+                        //productsModel.name,
                         color: kcPrimary,
                         fontSize: px18,
                         fontWeight: FontWeight.bold,
@@ -65,7 +65,7 @@ class ProductWidget extends StatelessWidget {
                       children: [
                         Icon(Icons.location_on_outlined,
                             color: Colors.grey, size: px20),
-                        const MyText.h6("الرياض"),
+                        const MyText.h6("مكة"),
                       ],
                     ),
                     verticalSpaceRegular,
@@ -75,7 +75,7 @@ class ProductWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           MyText.h6(
-                            "بيع",
+                            "استبدال",
                             color: kcPrimary,
                             fontSize: px20,
                             fontWeight: FontWeight.bold,
@@ -98,7 +98,10 @@ class ProductWidget extends StatelessWidget {
                 child: Hero(
                   tag: "imageProduct",
                   child: ImageApp(
-                    image: ApiUrl.imageUrl + productsModel.productImage,
+                    image:
+                        "https://cdn.arabsstock.com/uploads/images/98344/image-98344-gulf-gowns-abayas-jalabiyas-models-distinctive-colors-gulf-preview.jpg",
+                    // "https://cdn.arabsstock.com/uploads/images/98331/image-98331-brown-gulf-abaya-luxurious-modern-designs-fashion-elegance-preview.jpg",
+                    // image: ApiUrl.imageUrl + productsModel.productImage,
                     height: Get.height * .2,
                     fit: BoxFit.fitWidth,
                     filterQuality: FilterQuality.medium,

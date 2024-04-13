@@ -27,6 +27,7 @@ const kcAccentColorSwatch = MaterialColor(0xffF9D3E7, {
 });
 
 const kcPrimary = Color(0xffD973AB);
+// #21C179 #D973AB
 const kcAccent = Color(0xffF9D3E7);
 const kcAccentDark = Color(0xffEB81B3);
 const kcAccentLight = Color(0xffF9ECF3);
@@ -38,6 +39,7 @@ const Color kcGreyDark = Color(0xff868686);
 const Color kcGreyLightDark = Color(0xff9E9E9E);
 const Color kcGreyLight = Color(0xffADADAD);
 const Color kcGreyVeryLight = Color(0xFFF5F5F5);
+final Color kcGrey600 = Colors.grey.shade600;
 
 final lightTheme = ThemeData(
   fontFamily: 'markazi',

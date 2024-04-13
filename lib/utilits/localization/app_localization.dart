@@ -38,6 +38,13 @@ class AppLocalization implements Translations {
           AppConfig.support: "الدعم الفني",
           AppConfig.shareApp: "مشاركة التطبيق",
           AppConfig.language: "اللغة",
+          AppConfig.addProdcut: "اضافة عرض",
+          AppConfig.addPhoto: "اضافة صورة",
+          AppConfig.locationProdcut: "موقع المنتج",
+          AppConfig.titleProdcut: "عنوان المنتج",
+          AppConfig.category: "القسم",
+          AppConfig.next: "التالي",
+          AppConfig.back: "رجوع",
           ///////////////////////////////////////////////
           AppConfig.resetPassword: "استعادة كلمة المرور"
         },
@@ -63,11 +70,17 @@ class AppLocalization implements Translations {
           AppConfig.language: AppConfig.language,
           AppConfig.sitePolicies: AppConfig.sitePolicies,
           AppConfig.shareApp: AppConfig.shareApp,
+          AppConfig.addPhoto: AppConfig.addPhoto,
+          AppConfig.titleProdcut: AppConfig.titleProdcut,
 
           AppConfig.timeOut: AppConfig.timeOut,
           AppConfig.noInternet: AppConfig.noInternet,
           AppConfig.noDataFound: AppConfig.noDataFound,
           AppConfig.somthimgWroing: AppConfig.somthimgWroing,
+
+          AppConfig.addProdcut: AppConfig.addProdcut,
+          AppConfig.locationProdcut: AppConfig.locationProdcut,
+          AppConfig.category: AppConfig.category,
 
           AppConfig.version: AppConfig.version,
           AppConfig.buildNumber: AppConfig.buildNumber,
@@ -77,6 +90,8 @@ class AppLocalization implements Translations {
           AppConfig.paymentFeesSubscriptions:
               AppConfig.paymentFeesSubscriptions,
           AppConfig.logout: AppConfig.logout,
+          AppConfig.next: AppConfig.next,
+          AppConfig.back: AppConfig.back,
 
           ///////////////////////////////////////////////
           AppConfig.resetPassword: AppConfig.resetPassword

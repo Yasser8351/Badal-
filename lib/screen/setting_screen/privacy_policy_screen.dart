@@ -11,7 +11,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kcAccentLight.withAlpha(200),
+      backgroundColor: kcAccentLight,
       appBar: AppBar(title: Text(AppConfig.settings.tr)),
       body: SingleChildScrollView(
         child: Column(
@@ -23,7 +23,8 @@ class PrivacyPolicyScreen extends StatelessWidget {
                 title: AppConfig.faq.tr, icon: Icons.note_alt_outlined),
             SettingItemWidget(
                 title: AppConfig.privacyPolicy.tr, icon: Icons.security),
-            SettingItemWidget(title: AppConfig.logout.tr, icon: Icons.logout),
+            SettingItemWidget(
+                title: AppConfig.deleteAccount.tr, icon: Icons.delete),
           ],
         ),
       ),

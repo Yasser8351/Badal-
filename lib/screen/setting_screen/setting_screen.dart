@@ -1,3 +1,4 @@
+import 'package:badal/screen/notication_screen/user_notifcation_screen.dart';
 import 'package:badal/screen/setting_screen/privacy_policy_screen.dart';
 import 'package:badal/utilits/app_config.dart';
 import 'package:badal/utilits/app_theme.dart';
@@ -22,6 +23,7 @@ class SettingScreen extends StatelessWidget {
             verticalSpaceMedium,
             SettingItemWidget(title: AppConfig.profile.tr, icon: Icons.person),
             SettingItemWidget(
+                onTap: () => Get.to(() => const UserNotifcationScreen()),
                 title: AppConfig.notifications.tr,
                 icon: Icons.notifications_none_outlined),
             SettingItemWidget(

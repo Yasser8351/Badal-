@@ -19,3 +19,10 @@ enum ShimmerType {
 }
 
 enum LoadingType { login, none }
+
+enum DropdownType {
+  category,
+  city,
+  state,
+  none,
+}

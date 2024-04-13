@@ -186,6 +186,7 @@ class ContainerWithDecoration extends StatelessWidget {
       this.bottomRight = 0,
       this.bottomLeft = 0,
       this.border,
+      this.crossAxisAlignment,
       this.paddinLeft = 0,
       this.paddingRight = 0,
       this.paddingTop = 0,
@@ -206,10 +207,11 @@ class ContainerWithDecoration extends StatelessWidget {
   final double paddingTop;
   final double paddingBottom;
   final BoxBorder? border;
-
+  final CrossAxisAlignment? crossAxisAlignment;
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.center,
       children: [
         SizedBox(height: marginTop),
         InkWell(

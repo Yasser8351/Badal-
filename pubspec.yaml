@@ -52,6 +52,8 @@ dependencies:
   # converts a date into a humanized text. Instead of showing a date
   get_time_ago: ^1.2.5
 
+  paginated_list: ^1.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

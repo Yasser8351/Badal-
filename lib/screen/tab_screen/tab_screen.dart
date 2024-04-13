@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:badal/screen/auth_screen/sign_up_screen.dart';
+import 'package:badal/screen/setting_screen/add_product.dart';
 import 'package:badal/screen/tab_screen/chat_screen.dart';
 import 'package:badal/screen/tab_screen/favorite_screen.dart';
 import 'package:badal/screen/tab_screen/home_screen.dart';
@@ -48,7 +49,7 @@ class _TabScreenState extends State<TabScreen> {
   final List<Widget> pages = [
     const HomeScreen(),
     const FavoriteScreen(),
-    const HomeScreen(),
+    const AddProduct(),
     const ChatScreen(),
     const SettingScreen(),
   ];

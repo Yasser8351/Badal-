@@ -95,6 +95,7 @@ class ImageApp extends StatelessWidget {
         child: Image.asset(
           alignment: alignment ?? AlignmentDirectional.center,
           image,
+          color: color,
           width: width ?? px32,
           height: height ?? px32,
         ),

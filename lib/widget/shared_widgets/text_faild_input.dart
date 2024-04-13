@@ -39,6 +39,8 @@ class TextFaildInput extends StatelessWidget {
   final bool enabled;
   final TextStyle? hintStyle;
   final TextAlign? textAlign;
+  final InputBorder? enabledBorder;
+  final InputBorder? focusedBorder;
 
   const TextFaildInput(
       {Key? key,
@@ -47,6 +49,8 @@ class TextFaildInput extends StatelessWidget {
       this.hint,
       this.label,
       this.labelColor,
+      this.enabledBorder,
+      this.focusedBorder,
       this.onTap,
       this.inputFormatters,
       this.password = false,
@@ -116,7 +120,7 @@ class TextFaildInput extends StatelessWidget {
             // onTap: onTap,
             onChanged: (value) => {},
             textAlign: textAlign ?? TextAlign.start,
-            cursorColor: kcAccent,
+            cursorColor: kcPrimary,
             cursorRadius: const Radius.circular(2.0),
             inputFormatters: inputFormatters,
             obscureText: password,
@@ -126,20 +130,13 @@ class TextFaildInput extends StatelessWidget {
             textInputAction: inputAction,
             maxLength: maxLength,
             maxLines: maxLines ?? 1,
-            style: Theme.of(context).textTheme.bodyLarge,
+            style: TextStyle(fontSize: px20),
+            // style: Theme.of(context).textTheme.bodyLarge,
             textDirection: textDirection,
             maxLengthEnforcement: MaxLengthEnforcement.enforced,
             validator: validationMessages,
             enableInteractiveSelection: enableInteractiveSelection,
             decoration: InputDecoration(
-              prefixIconColor: MaterialStateColor.resolveWith((states) =>
-                  states.contains(MaterialState.focused)
-                      ? kcPrimary
-                      : Colors.grey),
-              suffixIconColor: MaterialStateColor.resolveWith((states) =>
-                  states.contains(MaterialState.focused)
-                      ? kcPrimary
-                      : Colors.grey),
               helperStyle: Theme.of(context).textTheme.labelSmall,
               prefixIcon: leadingIcon,
               prefixText: leadingText,
@@ -153,11 +150,14 @@ class TextFaildInput extends StatelessWidget {
                   : Theme.of(context)
                       .textTheme
                       .bodyMedium
-                      ?.copyWith(color: Colors.grey[350]),
+                      ?.copyWith(color: kcGrey600),
               contentPadding:
                   const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
               filled: true,
-              fillColor: kcGreyVeryLight,
+              focusColor: kcPrimary,
+              hoverColor: kcPrimary,
+
+              fillColor: Colors.grey.shade200,
               border: _outlinedBorder.copyWith(
                 borderSide: BorderSide(width: 1.0, color: Colors.grey[300]!),
               ),
@@ -165,12 +165,15 @@ class TextFaildInput extends StatelessWidget {
               errorBorder: _outlinedBorder.copyWith(
                 borderSide: const BorderSide(color: Colors.red, width: 1.0),
               ),
-              enabledBorder: _outlinedBorder.copyWith(
-                borderSide: BorderSide(width: 1.0, color: Colors.grey[300]!),
-              ),
-              focusedBorder: _outlinedBorder.copyWith(
-                borderSide: const BorderSide(color: kcAccentDark),
-              ),
+              enabledBorder: enabledBorder ??
+                  _outlinedBorder.copyWith(
+                    borderSide:
+                        BorderSide(width: 1.0, color: Colors.grey[300]!),
+                  ),
+              focusedBorder: focusedBorder ??
+                  _outlinedBorder.copyWith(
+                    borderSide: const BorderSide(color: kcAccentDark),
+                  ),
               counterStyle: Theme.of(context).textTheme.bodySmall,
               errorStyle: Theme.of(context)
                   .textTheme

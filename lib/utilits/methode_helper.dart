@@ -27,20 +27,19 @@ handlingCatchError({
   required Function(String message) errorMessageUpdate,
 }) {
   changeLoadingState();
-  if (error is DioException) {
-    if (error.toString().contains("SocketException") ||
-        error.toString().contains("Network is unreachable")) {
-      errorMessageUpdate(AppConfig.noInternet.tr);
-    } else if (error.toString().contains("TimeoutException") ||
-        error.toString().contains("connection timeout") ||
-        error.toString().contains("timeout")) {
-      errorMessageUpdate(AppConfig.timeOut.tr);
-    } else {
-      // if (error.response != null) {
-      // }
-      // errorMessageUpdate(error.message.toString());
-      errorMessageUpdate(error.response!.data['responseMessage']['messageAR']);
-    }
+  if (error.toString().contains("SocketException")) {
+    errorMessageUpdate(AppConfig.noInternet.tr);
+  } else if (error.toString().contains("TimeoutException") ||
+      error.toString().contains("connection timeout") ||
+      error.toString().contains("timeout")) {
+    errorMessageUpdate(AppConfig.timeOut.tr);
+  } else if (error is DioException) {
+    // if (error.response != null) {
+    // }
+    // errorMessageUpdate(error.message.toString());
+    errorMessageUpdate(error.response!.data['responseMessage']['messageAR']);
+  } else {
+    errorMessageUpdate(AppConfig.somthimgWroing.tr);
   }
 }
 /*

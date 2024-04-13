@@ -11,6 +11,7 @@ class MyButton extends StatelessWidget {
   final bool iconIsImage;
   final bool disable;
   final double width;
+  final EdgeInsetsGeometry? padding;
   final IconData? leadingIcon;
   final Color? color;
   final Color? textColorButton;
@@ -18,6 +19,7 @@ class MyButton extends StatelessWidget {
       {Key? key,
       required this.text,
       this.onTap,
+      this.padding,
       this.busy = false,
       this.iconIsImage = false,
       this.textColorButton,
@@ -32,6 +34,7 @@ class MyButton extends StatelessWidget {
       required this.text,
       this.onTap,
       this.textColorButton,
+      this.padding,
       this.busy = false,
       this.disable = false,
       this.width = double.maxFinite,
@@ -44,6 +47,7 @@ class MyButton extends StatelessWidget {
       {Key? key,
       required this.text,
       this.onTap,
+      this.padding,
       this.busy = false,
       this.textColorButton,
       this.disable = false,
@@ -56,54 +60,58 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: getButtonColor(context),
-      animationDuration: const Duration(milliseconds: 500),
-      clipBehavior: Clip.antiAlias,
-      elevation: 5.0,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20.0),
-          side: _buttonType == _ButtonType.outlined
-              ? BorderSide(color: color ?? kcAccent, width: 1.0)
-              : BorderSide.none),
-      child: SizedBox(
-        width: width,
-        height: 48.0,
-        child: InkWell(
-          splashColor: _buttonType == _ButtonType.filled
-              ? color?.withOpacity(0.5)
-              : null,
-          // highlightColor: kcPrimarySwatch[],
-          splashFactory: InkRipple.splashFactory,
-          onTap: disable || busy ? null : onTap,
-          customBorder: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15.0),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              if (leadingIcon != null && !busy)
-                Icon(
-                  leadingIcon,
-                  color: getTextColor(context),
-                ),
-              if (leadingIcon != null && !busy) horizontalSpaceSmall,
-              if (!busy)
-                MyText.button(text,
-                    color: textColorButton ?? getTextColor(context)),
-              if (busy)
-                SizedBox(
-                  height: 24.0,
-                  width: 24.0,
-                  child: CircularProgressIndicator(
-                    valueColor: AlwaysStoppedAnimation(
-                        Theme.of(context).primaryColorDark),
-                    strokeWidth: 3.0,
+    return Padding(
+      padding: padding ?? const EdgeInsets.all(0),
+      child: Material(
+        color: getButtonColor(context),
+        animationDuration: const Duration(milliseconds: 500),
+        clipBehavior: Clip.antiAlias,
+        elevation: 5.0,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20.0),
+            side: _buttonType == _ButtonType.outlined
+                ? BorderSide(color: color ?? kcAccent, width: 1.0)
+                : BorderSide.none),
+        child: SizedBox(
+          width: width,
+          height: 48.0,
+          child: InkWell(
+            splashColor: _buttonType == _ButtonType.filled
+                ? color?.withOpacity(0.5)
+                : null,
+            // highlightColor: kcPrimarySwatch[],
+            splashFactory: InkRipple.splashFactory,
+            onTap: disable || busy ? null : onTap,
+            customBorder: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                if (leadingIcon != null && !busy)
+                  Icon(
+                    leadingIcon,
+                    color: getTextColor(context),
                   ),
-                )
-            ],
+                if (leadingIcon != null && !busy) horizontalSpaceSmall,
+                if (!busy)
+                  MyText.button(text,
+                      color: textColorButton ?? getTextColor(context),
+                      fontSize: px20),
+                if (busy)
+                  SizedBox(
+                    height: 24.0,
+                    width: 24.0,
+                    child: CircularProgressIndicator(
+                      valueColor: AlwaysStoppedAnimation(
+                          Theme.of(context).primaryColorDark),
+                      strokeWidth: 3.0,
+                    ),
+                  )
+              ],
+            ),
           ),
         ),
       ),

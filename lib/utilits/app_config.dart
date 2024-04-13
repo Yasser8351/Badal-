@@ -15,7 +15,14 @@ class AppConfig {
   static const String chat = "Messages";
   static const String favorite = "Favorite";
   static const String settings = "Settings";
+  static const String addProdcut = "Add Prodcut";
+  static const String addPhoto = "Add Photo";
   static const String searchHint = "search";
+  static const String locationProdcut = "Location Prodcut";
+  static const String titleProdcut = "Title prodcut";
+  static const String category = "Category";
+  static const String next = "Next";
+  static const String back = "Back";
 
   /// Setting Screen
   static const String notifications = "Notifications";
@@ -31,6 +38,7 @@ class AppConfig {
   static const String shareApp = "Share the app";
   static const String sitePolicies = "Site Policies";
   static const String language = "Language";
+  static const String deleteAccount = "Delete account";
 
   static const String timeOut = "Your internet connection seems to be weak.";
   static const String tryAgain = "Try Again";
