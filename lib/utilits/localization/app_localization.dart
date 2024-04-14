@@ -45,6 +45,11 @@ class AppLocalization implements Translations {
           AppConfig.category: "القسم",
           AppConfig.next: "التالي",
           AppConfig.back: "رجوع",
+          AppConfig.price: "السعر",
+          AppConfig.phone: "الجوال",
+          AppConfig.descroption: "معلومات اضافية",
+          AppConfig.hidePhoneHint:
+              "عند اخفاء الرقم سيتواصل معك الأعضاء عن طريق رسائل التطبيق",
           ///////////////////////////////////////////////
           AppConfig.resetPassword: "استعادة كلمة المرور"
         },
@@ -81,6 +86,8 @@ class AppLocalization implements Translations {
           AppConfig.addProdcut: AppConfig.addProdcut,
           AppConfig.locationProdcut: AppConfig.locationProdcut,
           AppConfig.category: AppConfig.category,
+          AppConfig.descroption: AppConfig.descroption,
+          AppConfig.hidePhoneHint: AppConfig.hidePhoneHint,
 
           AppConfig.version: AppConfig.version,
           AppConfig.buildNumber: AppConfig.buildNumber,
@@ -92,6 +99,8 @@ class AppLocalization implements Translations {
           AppConfig.logout: AppConfig.logout,
           AppConfig.next: AppConfig.next,
           AppConfig.back: AppConfig.back,
+          AppConfig.phone: AppConfig.phone,
+          AppConfig.price: AppConfig.price,
 
           ///////////////////////////////////////////////
           AppConfig.resetPassword: AppConfig.resetPassword

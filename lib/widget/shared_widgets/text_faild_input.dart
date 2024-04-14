@@ -165,6 +165,7 @@ class TextFaildInput extends StatelessWidget {
               errorBorder: _outlinedBorder.copyWith(
                 borderSide: const BorderSide(color: Colors.red, width: 1.0),
               ),
+
               enabledBorder: enabledBorder ??
                   _outlinedBorder.copyWith(
                     borderSide:
@@ -174,7 +175,7 @@ class TextFaildInput extends StatelessWidget {
                   _outlinedBorder.copyWith(
                     borderSide: const BorderSide(color: kcAccentDark),
                   ),
-              counterStyle: Theme.of(context).textTheme.bodySmall,
+              counterStyle: Theme.of(context).textTheme.bodyLarge,
               errorStyle: Theme.of(context)
                   .textTheme
                   .bodySmall

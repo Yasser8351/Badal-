@@ -28,7 +28,7 @@ class SearchWithFilter extends StatelessWidget {
                 color: kcAccentLight,
                 borderRadius: BorderRadius.circular(10),
               ),
-              height: Get.height * .09, // 70 px
+              height: Get.height * .07,
               width: Get.width * .15,
               child: const Icon(Icons.filter_list, color: kcPrimary)),
         ),

@@ -50,7 +50,7 @@ class SearchWidget extends StatelessWidget {
           color: kcAccentLight,
           borderRadius: BorderRadius.circular(10),
         ),
-        height: height ?? Get.height * .09, // 70 px
+        height: height ?? Get.height * .07,
         width: width ?? Get.width * .79,
         child: TextField(
           controller: controller,

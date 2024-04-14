@@ -23,6 +23,11 @@ class AppConfig {
   static const String category = "Category";
   static const String next = "Next";
   static const String back = "Back";
+  static const String price = "Price";
+  static const String phone = "Phone";
+  static const String descroption = "Descroption";
+  static const String hidePhoneHint =
+      "When you hide the number, members will contact you via application messages";
 
   /// Setting Screen
   static const String notifications = "Notifications";
