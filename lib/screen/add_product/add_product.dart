@@ -1,3 +1,4 @@
+import 'package:badal/controller/category_and_city_controller.dart';
 import 'package:badal/utilits/all_enum.dart';
 import 'package:badal/utilits/app_config.dart';
 import 'package:badal/utilits/app_image.dart';
@@ -12,19 +13,17 @@ import 'package:badal/widget/shared_widgets/text_faild_input.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../controller/product_controller/add_product_controller.dart';
-
 class AddProduct extends StatelessWidget {
   const AddProduct({super.key});
 
   @override
   Widget build(BuildContext context) {
-    AddProductController addProductController = Get.find();
+    TextEditingController titleProductController = TextEditingController();
     return Scaffold(
       appBar: AppBar(
         title: Text(AppConfig.addProdcut.tr),
       ),
-      body: GetBuilder<AddProductController>(
+      body: GetBuilder<CategoryAndCityController>(
           builder: (controller) => SingleChildScrollView(
                 child: Align(
                   alignment: AlignmentDirectional.centerStart,
@@ -82,24 +81,22 @@ class AddProduct extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   DropdownWidget(
-                                      list: addProductController.listCity,
+                                      list: controller.listCity,
                                       onChangedValueSelected: (value) =>
-                                          addProductController
-                                              .onChangedValueSelected(
-                                                  value, DropdownType.city),
+                                          controller.onChangedValueSelected(
+                                              value, DropdownType.city),
                                       valueDrowpDownSelected:
-                                          addProductController.valueCity,
+                                          controller.valueCity,
                                       hint: "المدينة"),
                                   horizontalSpaceMedium,
-                                  if (addProductController.valueCity != null)
+                                  if (controller.valueCity != null)
                                     DropdownWidget(
-                                        list: addProductController.listState,
+                                        list: controller.listState,
                                         onChangedValueSelected: (value) =>
-                                            addProductController
-                                                .onChangedValueSelected(
-                                                    value, DropdownType.state),
+                                            controller.onChangedValueSelected(
+                                                value, DropdownType.state),
                                         valueDrowpDownSelected:
-                                            addProductController.valueState,
+                                            controller.valueState,
                                         hint: "المحلية"),
                                 ],
                               ),
@@ -124,8 +121,7 @@ class AddProduct extends StatelessWidget {
                                   fontSize: px18),
                               verticalSpaceSmall,
                               TextFaildInput(
-                                controller:
-                                    addProductController.titleProductController,
+                                controller: titleProductController,
                                 enabledBorder: const UnderlineInputBorder(
                                   borderSide:
                                       BorderSide(color: kcGreyVeryLight),
@@ -156,13 +152,12 @@ class AddProduct extends StatelessWidget {
                               verticalSpaceSmall,
                               MyText.h6(AppConfig.category.tr, fontSize: px18),
                               DropdownWidget(
-                                  list: addProductController.listCategory,
+                                  list: controller.listCategory,
                                   onChangedValueSelected: (value) =>
-                                      addProductController
-                                          .onChangedValueSelected(
-                                              value, DropdownType.category),
+                                      controller.onChangedValueSelected(
+                                          value, DropdownType.category),
                                   valueDrowpDownSelected:
-                                      addProductController.valueCategory,
+                                      controller.valueCategory,
                                   hint: "كل الاقسام")
                             ],
                           ),

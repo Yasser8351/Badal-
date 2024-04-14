@@ -27,6 +27,7 @@ handlingCatchError({
   required Function(String message) errorMessageUpdate,
 }) {
   changeLoadingState();
+
   if (error.toString().contains("SocketException")) {
     errorMessageUpdate(AppConfig.noInternet.tr);
   } else if (error.toString().contains("TimeoutException") ||
@@ -40,6 +41,22 @@ handlingCatchError({
     errorMessageUpdate(error.response!.data['responseMessage']['messageAR']);
   } else {
     errorMessageUpdate(AppConfig.somthimgWroing.tr);
+  }
+}
+
+handlingCatchError2(DioException error) {
+  switch (error.type) {
+    case DioExceptionType.sendTimeout:
+      return "";
+    case DioExceptionType.connectionTimeout:
+      return "";
+    case DioExceptionType.connectionError:
+      return "";
+    case DioExceptionType.receiveTimeout:
+      return "";
+
+    default:
+      return "";
   }
 }
 /*

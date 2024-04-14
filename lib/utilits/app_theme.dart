@@ -27,8 +27,8 @@ const kcAccentColorSwatch = MaterialColor(0xffF9D3E7, {
 });
 
 const kcPrimary = Color(0xffD973AB);
-// #21C179 #D973AB
 const kcAccent = Color(0xffF9D3E7);
+// #21C179 #D973AB
 const kcAccentDark = Color(0xffEB81B3);
 const kcAccentLight = Color(0xffF9ECF3);
 // const kcAccentLight = Color(0xffFBEAF3);
