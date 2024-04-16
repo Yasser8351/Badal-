@@ -8,8 +8,8 @@ abstract class MyController extends GetxController {
   int pageNumber = 0;
   int pageSize = 5;
 
-
   changeLoadingState(LoadingState state, LoadingType loadingType);
+  // errorMessageUpdate(String message);
 
   // changeLoadingState(LoadingState state, LoadingType loadingType) {
   //   loadingState = state;
