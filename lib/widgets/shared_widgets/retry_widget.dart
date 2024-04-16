@@ -1,74 +1,10 @@
+import 'package:badal/utilits/app_image.dart';
 import 'package:badal/utilits/app_theme.dart';
-import 'package:badal/widget/shared_widgets/all_shimmers_widgets.dart.dart';
-import 'package:badal/widget/shared_widgets/my_text.dart';
+import 'package:badal/utilits/app_ui_helpers.dart';
+import 'package:badal/widgets/shared_widgets/my_image_app.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:badal/utilits/all_enum.dart';
 import 'package:badal/utilits/app_config.dart';
-
-class HandlingDataView extends StatelessWidget {
-  const HandlingDataView({
-    Key? key,
-    required this.loadingState,
-    required this.widget,
-    this.shimmerType = ShimmerType.shimmerHorizontal,
-    this.tryAgan,
-    this.errorMessage,
-    this.sizedBoxHeight = 7,
-    this.itemCount,
-    this.errorMessageColor,
-    this.heightRetryWidget,
-  }) : super(key: key);
-  final LoadingState loadingState;
-  final Widget widget;
-  final Function()? tryAgan;
-  final ShimmerType shimmerType;
-  final String? errorMessage;
-  final double? heightRetryWidget;
-  final double sizedBoxHeight;
-  final int? itemCount;
-  final Color? errorMessageColor;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: loadingState == LoadingState.initial ||
-              loadingState == LoadingState.loading
-          ? shimmerType == ShimmerType.shimmerRectangular
-              ? const ShimmerRectangular()
-              : shimmerType == ShimmerType.shimmerListRectangular
-                  ? ShimmerListRectangular(itemCount: itemCount)
-                  : shimmerType == ShimmerType.shimmerCircular
-                      ? const ShimmerCircular()
-                      : const ShimmerHorizontal()
-          : loadingState == LoadingState.empty
-              ? MyText.h4(AppConfig.noDataFound.tr)
-              : loadingState == LoadingState.error
-                  ? RetryWidget(
-                      sizedBoxHeight: sizedBoxHeight,
-                      height: heightRetryWidget ?? Get.height / 5,
-                      errorMessage: errorMessage ?? AppConfig.somthimgWroing.tr,
-                      errorMessageColor: errorMessageColor,
-                      onTap: tryAgan ?? () {},
-                    )
-                  : loadingState == LoadingState.socketException
-                      ? MyText.h4(AppConfig.noInternet.tr)
-                      : widget,
-    );
-  }
-}
-
-// buidCont(loadingState) {
-//   switch (loadingState) {
-//     case LoadingState.initial || LoadingState.loading:
-//       return const ShimmerRectangular();
-//       break;
-
-//       defult:
-//       return const ShimmerRectangular();
-//   }
-//   // shimmerType == ShimmerType.shimmerRectangular
-// }
 
 class RetryWidget extends StatelessWidget {
   const RetryWidget(
@@ -77,6 +13,7 @@ class RetryWidget extends StatelessWidget {
       this.meesageButton,
       required this.onTap,
       this.height,
+      this.image,
       this.errorMessageColor,
       this.sizedBoxHeight = 4})
       : super(key: key);
@@ -85,6 +22,7 @@ class RetryWidget extends StatelessWidget {
   final Function() onTap;
 
   final double? height;
+  final String? image;
   final double sizedBoxHeight;
   final Color? errorMessageColor;
 
@@ -105,6 +43,11 @@ class RetryWidget extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  if (image != null) ...[
+                    MyImageApp(
+                        image: AppImage.placeholder, width: px90, height: px90),
+                    const SizedBox(height: 10),
+                  ],
                   Text(
                     errorMessage,
                     style: TextStyle(
@@ -140,6 +83,5 @@ class RetryWidget extends StatelessWidget {
         ),
       ],
     );
-    // return MyText.h4("error");
   }
 }

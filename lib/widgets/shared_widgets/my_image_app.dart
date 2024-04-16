@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 // import 'package:real_estate/utilits/app_image.dart';
 
-class ImageApp extends StatelessWidget {
-  const ImageApp(
+class MyImageApp extends StatelessWidget {
+  const MyImageApp(
       {super.key,
       required this.image,
       this.height,

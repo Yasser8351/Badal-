@@ -1,6 +1,6 @@
 import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
-import 'package:badal/widget/shared_widgets/my_text.dart';
+import 'package:badal/widgets/shared_widgets/my_text.dart';
 import 'package:flutter/material.dart';
 
 class SettingItemWidget extends StatelessWidget {

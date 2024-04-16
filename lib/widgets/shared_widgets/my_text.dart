@@ -1,3 +1,4 @@
+import 'package:badal/utilits/app_ui_helpers.dart';
 import 'package:flutter/material.dart';
 
 class MyText extends StatelessWidget {
@@ -216,7 +217,7 @@ class MyText extends StatelessWidget {
             color: color, fontWeight: fontWeight, fontSize: fontSize);
       case _TextStyles.headline5:
         return textTheme.headlineSmall?.copyWith(
-            color: color, fontWeight: fontWeight, fontSize: fontSize);
+            color: color, fontWeight: fontWeight, fontSize: fontSize ?? px20);
       case _TextStyles.headline6:
         return textTheme.titleLarge?.copyWith(
             color: color, fontWeight: fontWeight, fontSize: fontSize);

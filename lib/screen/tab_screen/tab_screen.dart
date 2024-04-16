@@ -12,6 +12,7 @@ import 'package:badal/utilits/app_ui_helpers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:badal/utilits/methode_helper.dart';
 
 // ignore: must_be_immutable
 class TabScreen extends StatefulWidget {
@@ -113,15 +114,8 @@ class _TabScreenState extends State<TabScreen> {
     timeBackPressed = DateTime.now();
 
     if (exitApp) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          backgroundColor: Theme.of(context).primaryColor,
-          duration: const Duration(seconds: 2),
-          content: const Text(
-            "اضغط مرة اخرى للخروج من التطبيق",
-            textAlign: TextAlign.right,
-          ),
-        ),
+      showMySnackbar(
+        title: "اضغط مرة اخرى للخروج من التطبيق",
       );
       return false;
     } else {

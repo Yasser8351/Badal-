@@ -1,6 +1,6 @@
 import 'package:badal/controller/notification_controller/user_notification_services.dart';
-import 'package:badal/model/notifcation_model/notification_model.dart';
-import 'package:badal/model/products_model.dart';
+import 'package:badal/models/notifcation_model/notification_model.dart';
+import 'package:badal/models/products_model.dart';
 import 'package:badal/utilits/api_url.dart';
 import 'package:badal/utilits/methode_helper.dart';
 import 'package:get/get.dart';

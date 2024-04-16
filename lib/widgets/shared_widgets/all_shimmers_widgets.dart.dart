@@ -1,4 +1,4 @@
-import 'package:badal/widget/shared_widgets/container_with_wecoration.dart';
+import 'package:badal/widgets/shared_widgets/container_with_decoration.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer/shimmer.dart';

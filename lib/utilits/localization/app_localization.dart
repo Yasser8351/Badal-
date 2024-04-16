@@ -43,6 +43,7 @@ class AppLocalization implements Translations {
           AppConfig.locationProdcut: "موقع المنتج",
           AppConfig.titleProdcut: "عنوان المنتج",
           AppConfig.category: "القسم",
+          AppConfig.subCategory: "القسم الفرعي",
           AppConfig.next: "التالي",
           AppConfig.back: "رجوع",
           AppConfig.price: "السعر",
@@ -50,6 +51,9 @@ class AppLocalization implements Translations {
           AppConfig.descroption: "معلومات اضافية",
           AppConfig.hidePhoneHint:
               "عند اخفاء الرقم سيتواصل معك الأعضاء عن طريق رسائل التطبيق",
+          AppConfig.feesAgrment: "اتفاقية الرسوم",
+          AppConfig.acceptFeesAgrment:
+              "اتعهد واقسم بالله انا المعلم ان ادفع رسوم الموقع وهي",
           ///////////////////////////////////////////////
           AppConfig.resetPassword: "استعادة كلمة المرور"
         },
@@ -77,6 +81,7 @@ class AppLocalization implements Translations {
           AppConfig.shareApp: AppConfig.shareApp,
           AppConfig.addPhoto: AppConfig.addPhoto,
           AppConfig.titleProdcut: AppConfig.titleProdcut,
+          AppConfig.subCategory: AppConfig.subCategory,
 
           AppConfig.timeOut: AppConfig.timeOut,
           AppConfig.noInternet: AppConfig.noInternet,
@@ -89,6 +94,8 @@ class AppLocalization implements Translations {
           AppConfig.descroption: AppConfig.descroption,
           AppConfig.hidePhoneHint: AppConfig.hidePhoneHint,
 
+          AppConfig.feesAgrment: AppConfig.feesAgrment,
+          AppConfig.acceptFeesAgrment: AppConfig.acceptFeesAgrment,
           AppConfig.version: AppConfig.version,
           AppConfig.buildNumber: AppConfig.buildNumber,
           AppConfig.termsOfServices: AppConfig.termsOfServices,

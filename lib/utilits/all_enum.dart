@@ -20,10 +20,17 @@ enum ShimmerType {
 
 enum LoadingType { login, none }
 
-enum ExpandeIndexType { category, subCategory }
+enum ExpandeIndexType {
+  category,
+  subCategory,
+  filterSearch,
+  filterWithLocation,
+  clearAllFilter,
+}
 
 enum DropdownType {
   category,
+  subCategory,
   city,
   state,
   none,

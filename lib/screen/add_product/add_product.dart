@@ -1,16 +1,17 @@
 import 'package:badal/controller/category_and_city_controller.dart';
+import 'package:badal/screen/fees_agrment/fees_agrment.dart';
 import 'package:badal/utilits/all_enum.dart';
 import 'package:badal/utilits/app_config.dart';
 import 'package:badal/utilits/app_image.dart';
 import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
-import 'package:badal/widget/shared_widgets/dropdown_widget.dart';
-import 'package:badal/widget/shared_widgets/handling_data_view.dart';
-import 'package:badal/widget/shared_widgets/image_app.dart';
-import 'package:badal/widget/shared_widgets/my_button.dart';
-import 'package:badal/widget/shared_widgets/my_text.dart';
-import 'package:badal/widget/shared_widgets/text_faild_input.dart';
-import 'package:badal/widget/shared_widgets/text_form_with_swith_button.dart';
+import 'package:badal/widgets/shared_widgets/dropdown_widget.dart';
+import 'package:badal/widgets/shared_widgets/container_with_decoration.dart';
+import 'package:badal/widgets/shared_widgets/my_image_app.dart';
+import 'package:badal/widgets/shared_widgets/my_button.dart';
+import 'package:badal/widgets/shared_widgets/my_text.dart';
+import 'package:badal/widgets/shared_widgets/text_faild_input.dart';
+import 'package:badal/widgets/shared_widgets/text_form_with_swith_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -51,7 +52,7 @@ class AddProduct extends StatelessWidget {
                     child: Column(
                       children: [
                         verticalSpaceSmall,
-                        ImageApp(
+                        MyImageApp(
                             image: AppImage.placeholder,
                             color: kcPrimary,
                             width: px32 * 2,
@@ -151,6 +152,49 @@ class AddProduct extends StatelessWidget {
 
                   /// add Category
                   verticalSpaceRegular,
+
+                  ContainerWithDecoration(
+                    bottomLeft: px10,
+                    bottomRight: px10,
+                    topLeft: px10,
+                    topRight: px10,
+                    paddingRight: px16,
+                    paddinLeft: px16,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        verticalSpaceSmall,
+                        MyText.h6(AppConfig.category.tr,
+                            fontSize: px18,
+                            padding: EdgeInsets.only(bottom: px10)),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            DropdownWidget(
+                                list: controller.listCategory,
+                                onChangedValueSelected: (value) =>
+                                    controller.onChangedValueSelected(
+                                        value, DropdownType.category),
+                                valueDrowpDownSelected:
+                                    controller.valueCategory,
+                                hint: AppConfig.category.tr),
+                            horizontalSpaceMedium,
+                            if (controller.valueCategory != null)
+                              DropdownWidget(
+                                  list: controller.listSubCategory,
+                                  onChangedValueSelected: (value) =>
+                                      controller.onChangedValueSelected(
+                                          value, DropdownType.subCategory),
+                                  valueDrowpDownSelected:
+                                      controller.valueSubCategory,
+                                  hint: AppConfig.subCategory.tr),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+/*
                   ContainerWithDecoration(
                     bottomLeft: px10,
                     bottomRight: px10,
@@ -174,17 +218,17 @@ class AddProduct extends StatelessWidget {
                       ],
                     ),
                   ),
-
+                      */
                   /// add price
                   verticalSpaceRegular,
                   TextFormWithSwithButton(
-                      controller: priceProductController,
+                      textEditingController: priceProductController,
                       hint: AppConfig.price.tr),
 
                   /// add phone
                   verticalSpaceRegular,
                   TextFormWithSwithButton(
-                      controller: phoneProductController,
+                      textEditingController: phoneProductController,
                       hint: AppConfig.phone.tr),
                   MyText.h6(
                     AppConfig.hidePhoneHint.tr,
@@ -193,8 +237,9 @@ class AddProduct extends StatelessWidget {
                   ),
                   verticalSpaceSemiLarge,
 
-                  /// send Data
+                  /// Next Page
                   MyButton(
+                    onTap: () => Get.to(() => const FeesAgrment()),
                     text: AppConfig.next.tr,
                     padding: EdgeInsetsDirectional.only(
                         bottom: px50, start: px25, end: px25),

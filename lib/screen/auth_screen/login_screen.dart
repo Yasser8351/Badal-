@@ -3,12 +3,13 @@ import 'package:badal/screen/auth_screen/sign_up_screen.dart';
 import 'package:badal/screen/tab_screen/tab_screen.dart';
 import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
-import 'package:badal/widget/shared_widgets/logo_app.dart';
-import 'package:badal/widget/shared_widgets/my_button.dart';
-import 'package:badal/widget/shared_widgets/my_text.dart';
-import 'package:badal/widget/shared_widgets/text_faild_input.dart';
+import 'package:badal/widgets/shared_widgets/logo_app.dart';
+import 'package:badal/widgets/shared_widgets/my_button.dart';
+import 'package:badal/widgets/shared_widgets/my_text.dart';
+import 'package:badal/widgets/shared_widgets/text_faild_input.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:badal/utilits/methode_helper.dart';
 
 import '../../utilits/app_config.dart';
 

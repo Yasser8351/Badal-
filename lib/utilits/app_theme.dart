@@ -57,6 +57,9 @@ final lightTheme = ThemeData(
   ),
 
   hoverColor: const Color.fromARGB(255, 212, 212, 212),
+  checkboxTheme: const CheckboxThemeData(
+    fillColor: MaterialStatePropertyAll(kcPrimary),
+  ),
   // primaryIconTheme: const IconThemeData(color: kcPrimary),
 
   indicatorColor: Colors.white,

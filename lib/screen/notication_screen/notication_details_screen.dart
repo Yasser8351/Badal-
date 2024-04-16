@@ -1,7 +1,7 @@
-import 'package:badal/model/notifcation_model/notification_model.dart';
+import 'package:badal/models/notifcation_model/notification_model.dart';
 import 'package:badal/utilits/app_image.dart';
 import 'package:badal/utilits/app_theme.dart';
-import 'package:badal/widget/shared_widgets/my_text.dart';
+import 'package:badal/widgets/shared_widgets/my_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

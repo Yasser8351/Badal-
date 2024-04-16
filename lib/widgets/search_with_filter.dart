@@ -1,7 +1,7 @@
-import 'package:badal/utilits/app_ui_helpers.dart';
+import 'package:badal/utilits/methode_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:badal/utilits/app_theme.dart';
-import 'package:badal/widget/shared_widgets/search_widget.dart';
+import 'package:badal/widgets/shared_widgets/search_widget.dart';
 import 'package:get/get.dart';
 
 class SearchWithFilter extends StatelessWidget {
@@ -20,9 +20,7 @@ class SearchWithFilter extends StatelessWidget {
           controller: searchController,
         ),
         InkWell(
-          onTap: () {
-            dialogApp();
-          },
+          onTap: () => dialogSearchFilter(),
           child: Container(
               decoration: BoxDecoration(
                 color: kcAccentLight,

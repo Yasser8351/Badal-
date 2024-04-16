@@ -6,7 +6,7 @@ import 'package:badal/utilits/api_url.dart';
 import 'package:badal/utilits/methode_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:badal/model/products_model.dart';
+import 'package:badal/models/products_model.dart';
 import 'package:badal/utilits/all_enum.dart';
 
 // import '../../models/home_model/products_by_id.dart';

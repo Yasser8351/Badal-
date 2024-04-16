@@ -1,4 +1,4 @@
-import 'package:badal/model/products_model.dart';
+import 'package:badal/models/products_model.dart';
 
 class GetCountUnReadNotifcationModel {
   GetCountUnReadNotifcationModel({

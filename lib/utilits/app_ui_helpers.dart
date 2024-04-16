@@ -1,5 +1,3 @@
-import 'package:badal/utilits/all_enum.dart';
-import 'package:badal/utilits/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -78,48 +76,3 @@ Widget verticalSpaceXXLarge = SizedBox(height: Get.height * .108);
 
 /// 100 pix
 Widget verticalSpaceXXXLarge = SizedBox(height: Get.height * .128535);
-
-///////////// methode helper /////////////
-
-bool isLoadingButton(LoadingState loadingState) {
-  if (loadingState == LoadingState.loading) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-dialogApp() {
-  Get.bottomSheet(
-    Container(
-      height: Get.height * .4,
-      decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20),
-            topRight: Radius.circular(20),
-          )),
-      child: const Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [],
-      ),
-    ),
-  );
-}
-
-showMySnackbar(
-    {required String title,
-    String body = '',
-    Color? backgroundColor,
-    SnackPosition? snackPosition}) {
-  Get.snackbar(
-    title,
-    body,
-    colorText: Colors.white,
-    snackPosition: snackPosition ?? SnackPosition.BOTTOM,
-    duration: const Duration(seconds: 3),
-    borderRadius: 13,
-    backgroundColor: backgroundColor ?? kcPrimary,
-  );
-}

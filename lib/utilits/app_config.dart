@@ -21,6 +21,7 @@ class AppConfig {
   static const String locationProdcut = "Location Prodcut";
   static const String titleProdcut = "Title prodcut";
   static const String category = "Category";
+  static const String subCategory = "Sub category";
   static const String next = "Next";
   static const String back = "Back";
   static const String price = "Price";
@@ -38,6 +39,8 @@ class AppConfig {
   static const String paymentFeesSubscriptions =
       "Payment of fees and subscriptions";
   static const String logout = "Logout";
+  static const String feesAgrment = "Fees Agrment";
+  static const String acceptFeesAgrment = "Accept Fees Agrment";
   static const String faq = "FAQ";
   static const String support = "Support";
   static const String shareApp = "Share the app";

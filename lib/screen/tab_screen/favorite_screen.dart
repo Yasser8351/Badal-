@@ -1,5 +1,5 @@
 import 'package:badal/utilits/app_config.dart';
-import 'package:badal/widget/list_product_widget.dart';
+import 'package:badal/widgets/list_product_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

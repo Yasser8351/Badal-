@@ -1,7 +1,7 @@
 import 'dart:developer';
 
-import 'package:badal/widget/notifcation_widget.dart';
-import 'package:badal/widget/shared_widgets/handling_data_view.dart';
+import 'package:badal/widgets/notifcation_widget.dart';
+import 'package:badal/widgets/shared_widgets/handling_data_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:badal/controller/notification_controller/user_notification_controller.dart';

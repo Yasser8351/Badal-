@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:badal/base_request/base_http_service.dart';
-import 'package:badal/model/products_model.dart';
+import 'package:badal/models/products_model.dart';
 import 'package:dio/dio.dart';
 
 class ProductsServices extends BaseHttpService {

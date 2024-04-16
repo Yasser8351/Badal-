@@ -1,10 +1,10 @@
-import 'package:badal/model/products_model.dart';
+import 'package:badal/models/products_model.dart';
 import 'package:badal/utilits/app_config.dart';
 import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
-import 'package:badal/widget/shared_widgets/card_border.dart';
-import 'package:badal/widget/shared_widgets/image_app.dart';
-import 'package:badal/widget/shared_widgets/my_text.dart';
+import 'package:badal/widgets/shared_widgets/card_border.dart';
+import 'package:badal/widgets/shared_widgets/my_image_app.dart';
+import 'package:badal/widgets/shared_widgets/my_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -97,7 +97,7 @@ class ProductWidget extends StatelessWidget {
                 borderRadius: const BorderRadius.all(Radius.circular(10)),
                 child: Hero(
                   tag: "imageProduct",
-                  child: ImageApp(
+                  child: MyImageApp(
                     image:
                         "https://cdn.arabsstock.com/uploads/images/98344/image-98344-gulf-gowns-abayas-jalabiyas-models-distinctive-colors-gulf-preview.jpg",
                     // "https://cdn.arabsstock.com/uploads/images/98331/image-98331-brown-gulf-abaya-luxurious-modern-designs-fashion-elegance-preview.jpg",

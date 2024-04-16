@@ -1,6 +1,6 @@
 import 'package:badal/controller/category_and_city_controller.dart';
 import 'package:badal/utilits/all_enum.dart';
-import 'package:badal/widget/category_widget.dart';
+import 'package:badal/widgets/category_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
 import 'package:get/get.dart';

@@ -1,6 +1,6 @@
 import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
-import 'package:badal/widget/shared_widgets/my_text.dart';
+import 'package:badal/widgets/shared_widgets/my_text.dart';
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
@@ -101,12 +101,11 @@ class MyButton extends StatelessWidget {
                       color: textColorButton ?? getTextColor(context),
                       fontSize: px20),
                 if (busy)
-                  SizedBox(
+                  const SizedBox(
                     height: 24.0,
                     width: 24.0,
                     child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation(
-                          Theme.of(context).primaryColorDark),
+                      valueColor: AlwaysStoppedAnimation(kcPrimary),
                       strokeWidth: 3.0,
                     ),
                   )
@@ -119,9 +118,9 @@ class MyButton extends StatelessWidget {
   }
 
   Color getButtonColor(BuildContext context) => disable
-      ? kcGreyLight
+      ? Colors.grey.shade300
       : busy
-          ? kcGreyLight
+          ? Colors.grey.shade300
           : _buttonType == _ButtonType.filled
               ? color ?? kcPrimary
               : Colors.transparent;
@@ -129,7 +128,7 @@ class MyButton extends StatelessWidget {
       ? kcGreyDark
       : _buttonType == _ButtonType.filled
           ? Colors.white
-          : color ?? Theme.of(context).primaryColorDark;
+          : color ?? kcPrimary;
 }
 
 enum _ButtonType { filled, outlined, text }

@@ -1,7 +1,7 @@
 import 'package:badal/utilits/app_config.dart';
 import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
-import 'package:badal/widget/setting_item_widget.dart';
+import 'package:badal/widgets/setting_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:badal/screen/tab_screen/tab_screen.dart';
 import 'package:badal/utilits/app_theme.dart';
-import 'package:badal/widget/shared_widgets/logo_app.dart';
+import 'package:badal/widgets/shared_widgets/logo_app.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

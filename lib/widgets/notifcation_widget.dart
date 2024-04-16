@@ -1,10 +1,10 @@
 import 'package:badal/controller/notification_controller/user_notification_controller.dart';
-import 'package:badal/model/notifcation_model/notification_model.dart';
+import 'package:badal/models/notifcation_model/notification_model.dart';
 import 'package:badal/screen/notication_screen/notication_details_screen.dart';
 import 'package:badal/utilits/app_image.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
-import 'package:badal/widget/shared_widgets/image_app.dart';
-import 'package:badal/widget/shared_widgets/my_text.dart';
+import 'package:badal/widgets/shared_widgets/my_image_app.dart';
+import 'package:badal/widgets/shared_widgets/my_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_time_ago/get_time_ago.dart';
@@ -57,7 +57,7 @@ class _NoticationWidgetState extends State<NoticationWidget> {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    ImageApp(image: AppImage.n4, width: px50, height: px50),
+                    MyImageApp(image: AppImage.n4, width: px50, height: px50),
                     horizontalSpaceRegular,
                     const MyText.h6(
                       "تم اضافة رد جديد",

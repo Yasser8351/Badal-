@@ -1,16 +1,23 @@
+import 'package:badal/controller/category_and_city_controller.dart';
 import 'package:badal/utilits/app_config.dart';
 import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
-import 'package:badal/widget/shared_widgets/my_text.dart';
-import 'package:badal/widget/shared_widgets/text_faild_input.dart';
+import 'package:badal/widgets/shared_widgets/my_text.dart';
+import 'package:badal/widgets/shared_widgets/text_faild_input.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class TextFormWithSwithButton extends StatelessWidget {
+class TextFormWithSwithButton extends GetView<CategoryAndCityController> {
+// class TextFormWithSwithButton extends StatelessWidget {
+  //GetView<CategoryAndCityController>
   const TextFormWithSwithButton(
-      {super.key, required this.controller, required this.hint});
-  final TextEditingController controller;
+      {super.key,
+      required this.textEditingController,
+      required this.hint,
+      this.valueSwitch});
+  final TextEditingController textEditingController;
   final String hint;
+  final bool? valueSwitch;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -19,7 +26,7 @@ class TextFormWithSwithButton extends StatelessWidget {
         SizedBox(
           width: Get.height * .35,
           child: TextFaildInput(
-            controller: controller,
+            controller: textEditingController,
             inputType: TextInputType.number,
             enabledBorder: const UnderlineInputBorder(
               borderSide: BorderSide(color: kcGreyVeryLight),
@@ -41,9 +48,11 @@ class TextFormWithSwithButton extends StatelessWidget {
             : SizedBox(
                 width: px25,
                 child: Switch(
-                  value: true,
+                  value: controller.valueSwitch,
                   activeColor: kcPrimary,
-                  onChanged: (value) {},
+                  onChanged: (value) {
+                    controller.onChangedValueSwitch(value);
+                  },
                 ),
               ),
       ],

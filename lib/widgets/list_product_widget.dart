@@ -1,8 +1,8 @@
 import 'package:badal/controller/products_controller.dart';
 import 'package:badal/utilits/all_enum.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
-import 'package:badal/widget/product_widget.dart';
-import 'package:badal/widget/shared_widgets/handling_data_view.dart';
+import 'package:badal/widgets/product_widget.dart';
+import 'package:badal/widgets/shared_widgets/handling_data_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -5,9 +5,14 @@ import 'package:badal/utilits/all_enum.dart';
 class CategoryAndCityController extends MyController {
   int expandeIndexCategory = 0;
   int expandeIndexSubCategory = 0;
-  String? valueState;
+  int expandeIndexFilterSearch = -1;
+  int expandeIndexlistFilterWithLocation = -1;
   String? valueCategory;
+  String? valueSubCategory;
   String? valueCity;
+  String? valueState;
+  bool valueSwitch = true;
+  bool valueCheckboxAgremnt = false;
 
   @override
   String errorMessage = "";
@@ -35,6 +40,15 @@ class CategoryAndCityController extends MyController {
     CategoryModel(3, "الليث"),
   ];
 
+  List<CategoryModel> listSearchFilter = [
+    CategoryModel(1, "حسب الأحدث"),
+    CategoryModel(2, "حسب الأقدم"),
+    CategoryModel(3, "حسب الأقل سعراً"),
+    CategoryModel(4, "حسب الأكثر سعراً"),
+  ];
+  List<CategoryModel> listFilterWithLocation = [
+    CategoryModel(1, "حسب الأقرب"),
+  ];
   @override
   void onInit() {
     listCategory.insert(0, CategoryModel(0, "كل الاقسام"));
@@ -53,7 +67,24 @@ class CategoryAndCityController extends MyController {
       expandeIndexCategory = index;
     } else if (expandeIndexType == ExpandeIndexType.subCategory) {
       expandeIndexSubCategory = index;
+    } else if (expandeIndexType == ExpandeIndexType.filterSearch) {
+      expandeIndexFilterSearch = index;
+    } else if (expandeIndexType == ExpandeIndexType.filterWithLocation) {
+      expandeIndexlistFilterWithLocation = index;
+    } else if (expandeIndexType == ExpandeIndexType.clearAllFilter) {
+      expandeIndexlistFilterWithLocation = index;
+      expandeIndexFilterSearch = index;
     }
+    update();
+  }
+
+  onChangedValueSwitch(bool value) {
+    valueSwitch = value;
+    update();
+  }
+
+  onChangedValueCheckboxAgremnt(bool value) {
+    valueCheckboxAgremnt = value;
     update();
   }
 
@@ -64,6 +95,8 @@ class CategoryAndCityController extends MyController {
       valueCity = valueSelected;
     } else if (dropdownType == DropdownType.state) {
       valueState = valueSelected;
+    } else if (dropdownType == DropdownType.subCategory) {
+      valueSubCategory = valueSelected;
     }
 
     update();

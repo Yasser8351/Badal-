@@ -4,9 +4,9 @@ import 'dart:io';
 // import 'dart:html';
 
 import 'package:badal/base_request/base_http_service.dart';
-import 'package:badal/model/notifcation_model/get_count_un_read_notifcation_model.dart';
-import 'package:badal/model/notifcation_model/notification_model.dart';
-import 'package:badal/model/products_model.dart';
+import 'package:badal/models/notifcation_model/get_count_un_read_notifcation_model.dart';
+import 'package:badal/models/notifcation_model/notification_model.dart';
+import 'package:badal/models/products_model.dart';
 import 'package:dio/dio.dart';
 
 class UserNotificationsServices extends BaseHttpService {

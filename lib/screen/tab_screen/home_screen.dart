@@ -1,7 +1,7 @@
 import 'package:badal/utilits/app_ui_helpers.dart';
-import 'package:badal/widget/list_category_widget.dart';
-import 'package:badal/widget/list_product_widget.dart';
-import 'package:badal/widget/search_with_filter.dart';
+import 'package:badal/widgets/list_category_widget.dart';
+import 'package:badal/widgets/list_product_widget.dart';
+import 'package:badal/widgets/search_with_filter.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
