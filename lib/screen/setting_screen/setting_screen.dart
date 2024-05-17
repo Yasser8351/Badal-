@@ -1,5 +1,5 @@
 import 'package:badal/screen/notication_screen/user_notifcation_screen.dart';
-import 'package:badal/screen/setting_screen/privacy_policy_screen.dart';
+import 'package:badal/screen/setting_screen/privacy_app_screen.dart';
 import 'package:badal/utilits/app_config.dart';
 import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
@@ -30,7 +30,8 @@ class SettingScreen extends StatelessWidget {
                 title: AppConfig.paymentFeesSubscriptions.tr,
                 icon: CupertinoIcons.money_dollar_circle),
             SettingItemWidget(
-              onTap: () => Get.to(() => const PrivacyPolicyScreen()),
+              onTap: () => Get.to(() => const PrivacyAppScreen()),
+              // onTap: () => Get.to(() => const PrivacyPolicyScreen()),
               title: AppConfig.sitePolicies.tr,
               icon: Icons.settings,
             ),

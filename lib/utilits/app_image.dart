@@ -1,6 +1,6 @@
 class AppImage {
   static const _root = "assets/images";
-  static const logo = "$_root/logo.png";
+  static const logo = "$_root/logo.jpg";
   static const carWash = "$_root/car_wash.png";
   static const carWash1 = "$_root/car_wash1.png";
   static const sedan = "$_root/sedan.png";
