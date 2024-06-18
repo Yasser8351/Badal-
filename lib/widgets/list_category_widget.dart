@@ -14,7 +14,7 @@ class ListCategoryWidget extends StatelessWidget {
       builder: (controller) => Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(top: px32),
+            padding: EdgeInsets.only(top: px14),
             child: SizedBox(
               height: px100,
               child: Padding(

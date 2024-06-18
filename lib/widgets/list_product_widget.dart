@@ -21,7 +21,7 @@ class ListProductWidget extends StatelessWidget {
         errorMessage: productsController.errorMessage,
         sizedBoxHeight: px100 * 1.4,
         widget: ListView.builder(
-          // padding: EdgeInsets.only(top: 0),
+          padding: EdgeInsets.only(top: 0),
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           itemCount: 5,

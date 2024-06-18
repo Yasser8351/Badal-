@@ -31,4 +31,8 @@ class AppImage {
   static const nSVG5 = "$_root/n5.svg";
   static const nSVG6 = "$_root/n6.svg";
   static const nSVG7 = "$_root/n7.svg";
+  static const slider1 = "$_root/slider1.PNG";
+  static const slider2 = "$_root/slider2.PNG";
+  static const slider3 = "$_root/slider3.PNG";
+  static const slider = "$_root/slider1.avif";
 }
