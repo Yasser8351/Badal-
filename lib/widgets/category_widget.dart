@@ -1,5 +1,4 @@
 import 'package:badal/controller/product_controller/add_product_controller.dart';
-import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/widgets/shared_widgets/my_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,39 +19,41 @@ class CategoryWidget extends GetView<AddProductController> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.only(end: px10),
+      padding: EdgeInsetsDirectional.only(end: px5),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          /// MyImageApp(image: categoryModel.image),
+
+          CircleAvatar(
+            radius: px25,
+            backgroundColor: Colors.grey.shade200,
+            backgroundImage: AssetImage(categoryModel.image),
+          ),
           Stack(
             children: [
               Container(
                 decoration: BoxDecoration(
-                  color: expandeIndex == index
-                      ? kcPrimary
-                      : kcAccentLight.withAlpha(150),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(10),
-                    topRight: Radius.circular(10),
-                    bottomRight: Radius.circular(10),
-                    bottomLeft: Radius.circular(10),
-                  ),
-                ),
+                    // color: expandeIndex == index
+                    //     ? kcPrimary
+                    //     : kcAccentLight.withAlpha(150),
+                    // borderRadius: const BorderRadius.only(
+                    //   topLeft: Radius.circular(10),
+                    //   topRight: Radius.circular(10),
+                    //   bottomRight: Radius.circular(10),
+                    //   bottomLeft: Radius.circular(10),
+                    // ),
+                    ),
                 child: MyText.h6(
                   padding: EdgeInsetsDirectional.only(
                       start: px12, end: px12, top: 8, bottom: 8),
                   categoryModel.name,
-                  fontSize: px20,
-                  color: expandeIndex == index ? Colors.white : kcPrimary,
+                  fontSize: px16,
+                  // color: kcPrimary,
+                  color: Colors.black87,
+                  // color: expandeIndex == index ? Colors.white : kcPrimary,
                 ),
               ),
-              // if (expandeIndex == index)
-              //   PositionedDirectional(
-              //       bottom: Get.width * .3,
-              //       end: 0,
-              //       top: 0,
-              //       start: Get.width * .3,
-              //       child: const Icon(Icons.done, color: Colors.white)),
             ],
           ),
         ],

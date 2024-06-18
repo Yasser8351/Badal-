@@ -1,6 +1,14 @@
 class AppImage {
   static const _root = "assets/images";
   static const logo = "$_root/logo.jpg";
+  static const logo2 = "$_root/logo2.jpg";
+  static const cat1 = "$_root/1.jpg";
+  static const cat2 = "$_root/2.jpg";
+  static const cat3 = "$_root/3.jpg";
+  static const cat4 = "$_root/4.jpg";
+  static const cat5 = "$_root/5.jpg";
+  static const cat6 = "$_root/6.jpg";
+  static const logo_trans = "$_root/logo_trans.jpg";
   static const carWash = "$_root/car_wash.png";
   static const carWash1 = "$_root/car_wash1.png";
   static const sedan = "$_root/sedan.png";

@@ -17,19 +17,21 @@ class ListProductWidget extends StatelessWidget {
       builder: (controller) => HandlingDataView(
         tryAgan: () => productsController.getProducts(),
         shimmerType: ShimmerType.shimmerListRectangular,
-        loadingState: productsController.loadingStateProduct,
+        loadingState: LoadingState.loaded,
         errorMessage: productsController.errorMessage,
         sizedBoxHeight: px100 * 1.4,
         widget: ListView.builder(
-          padding: EdgeInsets.only(top: px10),
+          // padding: EdgeInsets.only(top: 0),
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
-          itemCount: productsController.productsModel.products.length,
+          itemCount: 5,
+          // itemCount: productsController.productsModel.products.length,
           itemBuilder: (ctx, index) => Padding(
             padding: EdgeInsets.only(bottom: px10),
             child: ProductWidget(
-                productsModel:
-                    productsController.productsModel.products[index]),
+                // productsModel:
+                //     productsController.productsModel.products[index]
+                ),
           ),
         ),
       ),

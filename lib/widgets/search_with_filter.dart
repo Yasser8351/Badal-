@@ -1,6 +1,4 @@
-import 'package:badal/utilits/methode_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/widgets/shared_widgets/search_widget.dart';
 import 'package:get/get.dart';
 
@@ -15,21 +13,22 @@ class SearchWithFilter extends StatelessWidget {
       children: [
         SearchWidget(
           paddingEnd: Get.height * .02,
-          width: Get.width * .75,
+          // width: Get.width * .75,
+          width: Get.width * .9,
           onTap: () {},
           controller: searchController,
         ),
-        InkWell(
-          onTap: () => dialogSearchFilter(),
-          child: Container(
-              decoration: BoxDecoration(
-                color: kcAccentLight,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              height: Get.height * .07,
-              width: Get.width * .15,
-              child: const Icon(Icons.filter_list, color: kcPrimary)),
-        ),
+        // InkWell(
+        //   onTap: () => dialogSearchFilter(),
+        //   child: Container(
+        //       decoration: BoxDecoration(
+        //         color: kcAccentLight,
+        //         borderRadius: BorderRadius.circular(10),
+        //       ),
+        //       height: Get.height * .07,
+        //       width: Get.width * .15,
+        //       child: const Icon(Icons.filter_list, color: kcPrimary)),
+        // ),
       ],
     );
   }

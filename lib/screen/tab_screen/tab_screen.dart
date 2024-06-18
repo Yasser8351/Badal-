@@ -81,8 +81,9 @@ class _TabScreenState extends State<TabScreen> {
                         label: AppConfig.home.tr,
                         backgroundColor: kcAccent),
                     BottomNavigationBarItem(
-                      icon: const Icon(CupertinoIcons.heart),
-                      label: AppConfig.favorite.tr,
+                      icon: const Icon(Icons.history),
+                      label: "السجل",
+                      // label: AppConfig.favorite.tr,
                     ),
                     BottomNavigationBarItem(
                       icon: Icon(CupertinoIcons.add_circled_solid,

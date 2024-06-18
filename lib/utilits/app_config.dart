@@ -10,12 +10,16 @@ class AppConfig {
   static const String alreadyHaveAccount = "Already have an Account?";
   static const String resetPassword = "Reset Password";
 
+  static const String used = "مستعمل";
+  static const String newProduct = "جديد";
+
   static const String home = "Home";
   static const String profile = "Profile";
   static const String chat = "Messages";
   static const String favorite = "Favorite";
   static const String settings = "Settings";
   static const String addProdcut = "Add Prodcut";
+  static const String addVideo = "اضافة فيديو";
   static const String addPhoto = "Add Photo";
   static const String searchHint = "search";
   static const String locationProdcut = "Location Prodcut";

@@ -5,6 +5,7 @@ import 'package:badal/utilits/app_config.dart';
 import 'package:badal/utilits/app_image.dart';
 import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
+import 'package:badal/widgets/shared_widgets/account_type_widget.dart';
 import 'package:badal/widgets/shared_widgets/dropdown_widget.dart';
 import 'package:badal/widgets/shared_widgets/container_with_decoration.dart';
 import 'package:badal/widgets/shared_widgets/my_image_app.dart';
@@ -194,6 +195,10 @@ class AddProduct extends StatelessWidget {
                       ],
                     ),
                   ),
+
+                  /// add Product Status
+                  verticalSpaceRegular,
+                  const ProductStatusWidget(),
 /*
                   ContainerWithDecoration(
                     bottomLeft: px10,
@@ -227,6 +232,7 @@ class AddProduct extends StatelessWidget {
 
                   /// add phone
                   verticalSpaceRegular,
+
                   TextFormWithSwithButton(
                       textEditingController: phoneProductController,
                       hint: AppConfig.phone.tr),
@@ -235,6 +241,34 @@ class AddProduct extends StatelessWidget {
                     color: kcPrimary,
                     padding: EdgeInsetsDirectional.only(top: px14),
                   ),
+                  verticalSpaceRegular,
+
+                  /// add image
+                  verticalSpaceRegular,
+                  ContainerWithDecoration(
+                      bottomLeft: px10,
+                      bottomRight: px10,
+                      topLeft: px10,
+                      topRight: px10,
+                      paddingRight: px16,
+                      paddinLeft: px16,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      child: Center(
+                        child: Column(
+                          children: [
+                            verticalSpaceSmall,
+                            MyImageApp(
+                                image: AppImage.placeholder,
+                                color: kcPrimary,
+                                width: px32 * 2,
+                                height: px32 * 2),
+                            MyText.h6(AppConfig.addVideo.tr,
+                                fontSize: px18,
+                                padding: EdgeInsets.only(
+                                    right: 15, left: 15, bottom: px10)),
+                          ],
+                        ),
+                      )),
                   verticalSpaceSemiLarge,
 
                   /// Next Page

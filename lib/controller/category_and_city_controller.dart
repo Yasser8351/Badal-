@@ -1,6 +1,7 @@
 import 'package:badal/controller/my_controller.dart';
 import 'package:badal/controller/product_controller/add_product_controller.dart';
 import 'package:badal/utilits/all_enum.dart';
+import 'package:badal/utilits/app_image.dart';
 
 class CategoryAndCityController extends MyController {
   int expandeIndexCategory = 0;
@@ -18,41 +19,44 @@ class CategoryAndCityController extends MyController {
   String errorMessage = "";
   ////
   List<CategoryModel> listCategory = [
-    CategoryModel(1, "قسم رجالي"),
-    CategoryModel(2, "قسم نسائي"),
-    CategoryModel(3, "قسم اطفالي"),
+    CategoryModel(id: 0, name: "فساتين عرايس", image: AppImage.cat4),
+    CategoryModel(id: 1, name: "فساتين سهرة", image: AppImage.cat3),
+    CategoryModel(id: 2, name: "الاجهزة", image: AppImage.cat1),
+    CategoryModel(id: 3, name: "اكسسوارات", image: AppImage.cat2),
+    CategoryModel(id: 4, name: "الشنط", image: AppImage.cat5),
+    CategoryModel(id: 5, name: "مستلزمات الأطفال", image: AppImage.cat6),
   ];
   List<CategoryModel> listSubCategory = [
-    CategoryModel(1, "ملابس"),
-    CategoryModel(2, "احذية"),
-    CategoryModel(3, "ساعات"),
-    CategoryModel(4, "اكسسوارات"),
+    CategoryModel(id: 1, name: "ملابس"),
+    CategoryModel(id: 2, name: "احذية"),
+    CategoryModel(id: 3, name: "ساعات"),
+    CategoryModel(id: 4, name: "اكسسوارات"),
   ];
 
   List<CategoryModel> listCity = [
-    CategoryModel(1, "الرياض"),
-    CategoryModel(2, "جدة"),
-    CategoryModel(3, "مكة المكرمة"),
+    CategoryModel(id: 1, name: "الرياض"),
+    CategoryModel(id: 2, name: "جدة"),
+    CategoryModel(id: 3, name: "مكة المكرمة"),
   ];
   List<CategoryModel> listState = [
-    CategoryModel(1, "القنفذة"),
-    CategoryModel(2, "الكامل"),
-    CategoryModel(3, "الليث"),
+    CategoryModel(id: 1, name: "القنفذة"),
+    CategoryModel(id: 2, name: "الكامل"),
+    CategoryModel(id: 3, name: "الليث"),
   ];
 
   List<CategoryModel> listSearchFilter = [
-    CategoryModel(1, "حسب الأحدث"),
-    CategoryModel(2, "حسب الأقدم"),
-    CategoryModel(3, "حسب الأقل سعراً"),
-    CategoryModel(4, "حسب الأكثر سعراً"),
+    CategoryModel(id: 1, name: "حسب الأحدث"),
+    CategoryModel(id: 2, name: "حسب الأقدم"),
+    CategoryModel(id: 3, name: "حسب الأقل سعراً"),
+    CategoryModel(id: 4, name: "حسب الأكثر سعراً"),
   ];
   List<CategoryModel> listFilterWithLocation = [
-    CategoryModel(1, "حسب الأقرب"),
+    CategoryModel(id: 1, name: "حسب الأقرب"),
   ];
   @override
   void onInit() {
-    listCategory.insert(0, CategoryModel(0, "كل الاقسام"));
-    listSubCategory.insert(0, CategoryModel(0, "الكل"));
+    // listCategory.insert(0, CategoryModel(id: 0, name: "كل الاقسام"));
+    // listSubCategory.insert(0, CategoryModel(id: 0, name: "الكل"));
     super.onInit();
   }
 

@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
       translations: AppLocalization(),
       // locale: contoller.local ?? const Locale("ar"),
       initialBinding: BinindingApp(),
+      // home: WebViewExample(),
       home: const SplashScreen(),
     );
   }

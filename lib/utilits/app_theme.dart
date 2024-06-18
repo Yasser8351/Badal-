@@ -40,6 +40,7 @@ const Color kcGreyLightDark = Color(0xff9E9E9E);
 const Color kcGreyLight = Color(0xffADADAD);
 const Color kcGreyVeryLight = Color(0xFFF5F5F5);
 final Color kcGrey600 = Colors.grey.shade600;
+const Color kcBlackDark = Color(0xff0F172A);
 
 final lightTheme = ThemeData(
   fontFamily: 'markazi',

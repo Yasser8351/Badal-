@@ -90,13 +90,14 @@ class ProductsController extends MyController {
           .timeout(const Duration(seconds: ApiUrl.timeLimit));
       changeLoadingStateProduct(LoadingState.loaded);
     } catch (error) {
+      changeLoadingStateProduct(LoadingState.loaded);
       log("error $error");
 
-      handlingCatchError(
-        error: error,
-        changeLoadingState: () => changeLoadingStateProduct(LoadingState.error),
-        errorMessageUpdate: (message) => errorMessageUpdate(message),
-      );
+      // handlingCatchError(
+      //   error: error,
+      //   changeLoadingState: () => changeLoadingStateProduct(LoadingState.error),
+      //   errorMessageUpdate: (message) => errorMessageUpdate(message),
+      // );
     }
   }
 

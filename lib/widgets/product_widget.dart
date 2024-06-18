@@ -1,30 +1,28 @@
-import 'package:badal/models/products_model.dart';
-import 'package:badal/utilits/app_config.dart';
 import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
 import 'package:badal/widgets/shared_widgets/card_border.dart';
+import 'package:badal/widgets/shared_widgets/container_with_decoration.dart';
 import 'package:badal/widgets/shared_widgets/my_image_app.dart';
 import 'package:badal/widgets/shared_widgets/my_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_time_ago/get_time_ago.dart';
-import 'package:money_formatter/money_formatter.dart';
 // import 'package:timeago/timeago.dart' as timeago;
 
 class ProductWidget extends StatelessWidget {
   const ProductWidget({
     Key? key,
-    required this.productsModel,
+    // required this.productsModel,
   }) : super(key: key);
-  final Products productsModel;
+  // final Products productsModel;
 
   @override
   Widget build(BuildContext context) {
-    MoneyFormatterOutput priceFormatter = MoneyFormatter(
-        amount: double.parse(
-      productsModel.price.toString(),
-    )).output;
+    // MoneyFormatterOutput priceFormatter = MoneyFormatter(
+    //     amount: double.parse(
+    //   productsModel.price.toString(),
+    // )).output;
 
     final dateTime = DateTime.now();
 
@@ -43,9 +41,9 @@ class ProductWidget extends StatelessWidget {
                   children: [
                     MyText.h6("فستان تركي للبيع",
                         //productsModel.name,
-                        color: kcPrimary,
+                        color: kcBlackDark,
                         fontSize: px18,
-                        fontWeight: FontWeight.bold,
+                        // fontWeight: FontWeight.bold,
                         maxLines: 3,
                         padding: EdgeInsetsDirectional.only(start: px5)),
                     verticalSpaceRegular,
@@ -74,20 +72,57 @@ class ProductWidget extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          MyText.h6(
-                            "استبدال",
-                            color: kcPrimary,
-                            fontSize: px20,
-                            fontWeight: FontWeight.bold,
+                          ContainerWithDecoration(
+                            bottomLeft: 150,
+                            bottomRight: 150,
+                            topLeft: 150,
+                            topRight: 150,
+                            color: kcBlackDark,
+                            child: MyText.h6(
+                              "استبدال",
+                              color: Colors.white,
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 12, vertical: 7),
+                              fontSize: px16,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                           horizontalSpaceRegular,
-                          MyText.h6(
-                            "${priceFormatter.nonSymbol} ${AppConfig.curancy.tr}",
-                            color: kcPrimary,
-                            fontSize: px20,
-                            fontWeight: FontWeight.w600,
+                          ContainerWithDecoration(
+                            bottomLeft: 150,
+                            bottomRight: 150,
+                            topLeft: 150,
+                            topRight: 150,
+                            color: kcBlackDark,
+                            child: MyText.h6(
+                              "جديد",
+                              // "1000 ${AppConfig.curancy.tr}",
+                              // "${priceFormatter.nonSymbol} ${AppConfig.curancy.tr}",
+                              color: Colors.white,
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 12, vertical: 7),
+                              fontSize: px16,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ],
+                      ),
+                    ),
+                    verticalSpaceRegular,
+                    ContainerWithDecoration(
+                      bottomLeft: 10,
+                      bottomRight: 10,
+                      topLeft: 10,
+                      topRight: 10,
+                      color: Colors.white,
+                      border: Border.all(color: kcBlackDark),
+                      child: MyText.h6(
+                        "عرض التفاصيل",
+                        color: Colors.black87,
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+                        fontSize: px16,
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                   ],
@@ -99,8 +134,8 @@ class ProductWidget extends StatelessWidget {
                   tag: "imageProduct",
                   child: MyImageApp(
                     image:
-                        "https://cdn.arabsstock.com/uploads/images/98344/image-98344-gulf-gowns-abayas-jalabiyas-models-distinctive-colors-gulf-preview.jpg",
-                    // "https://cdn.arabsstock.com/uploads/images/98331/image-98331-brown-gulf-abaya-luxurious-modern-designs-fashion-elegance-preview.jpg",
+                        // "https://cdn.arabsstock.com/uploads/images/98344/image-98344-gulf-gowns-abayas-jalabiyas-models-distinctive-colors-gulf-preview.jpg",
+                        "https://cdn.arabsstock.com/uploads/images/98331/image-98331-brown-gulf-abaya-luxurious-modern-designs-fashion-elegance-preview.jpg",
                     // image: ApiUrl.imageUrl + productsModel.productImage,
                     height: Get.height * .2,
                     fit: BoxFit.fitWidth,

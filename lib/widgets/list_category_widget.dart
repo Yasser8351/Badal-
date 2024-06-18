@@ -14,9 +14,9 @@ class ListCategoryWidget extends StatelessWidget {
       builder: (controller) => Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(top: px5),
+            padding: EdgeInsets.only(top: px32),
             child: SizedBox(
-              height: px50,
+              height: px100,
               child: Padding(
                 padding: EdgeInsetsDirectional.symmetric(horizontal: px5),
                 child: ListView.builder(
@@ -36,6 +36,7 @@ class ListCategoryWidget extends StatelessWidget {
               ),
             ),
           ),
+          /*
           if (controller.expandeIndexCategory != 0)
             Padding(
               padding: EdgeInsets.only(top: px5),
@@ -60,6 +61,7 @@ class ListCategoryWidget extends StatelessWidget {
                 ),
               ),
             ),
+      */
         ],
       ),
     );
