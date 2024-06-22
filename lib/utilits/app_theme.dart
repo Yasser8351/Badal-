@@ -43,6 +43,7 @@ final Color kcGrey600 = Colors.grey.shade600;
 const Color kcBlackDark = Color(0xff0F172A);
 
 final lightTheme = ThemeData(
+  useMaterial3: false,
   fontFamily: 'markazi',
   iconTheme: const IconThemeData(size: 24.0, color: Colors.black87),
   splashColor: kcPrimary,

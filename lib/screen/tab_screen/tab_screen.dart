@@ -68,7 +68,7 @@ class _TabScreenState extends State<TabScreen> {
               child: Scaffold(
                 body: pages[widget.selectIndex],
                 bottomNavigationBar: BottomNavigationBar(
-                  backgroundColor: kcAccentLight,
+                  // backgroundColor: kcAccentLight,
                   selectedIconTheme:
                       const IconThemeData(color: kcPrimary, size: 26),
                   type: BottomNavigationBarType.fixed,

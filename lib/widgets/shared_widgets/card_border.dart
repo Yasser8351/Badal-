@@ -17,7 +17,7 @@ class CardBorder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: color,
+      color: color ?? Colors.white,
       shape: shape ??
           const RoundedRectangleBorder(
             side: BorderSide(

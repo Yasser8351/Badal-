@@ -1,20 +1,24 @@
-import 'package:badal/utilits/app_config.dart';
-import 'package:badal/utilits/app_theme.dart';
+import 'package:badal/utilits/app_image.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import 'my_text.dart';
 
 class LogoApp extends StatelessWidget {
-  const LogoApp({super.key});
+  const LogoApp({super.key, this.width, this.height});
+  final double? width;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
-      radius: Get.width * .19,
-      foregroundColor: kcPrimary,
-      backgroundColor: kcPrimary,
-      child: MyText.h5(AppConfig.appName.tr, color: Colors.white),
+    return Image.asset(
+      AppImage.logo2,
+      width: width,
+      height: height,
     );
+    // return CircleAvatar(
+    //   radius: Get.width * .19,
+    //   // foregroundColor: kcPrimary,
+    //   // backgroundColor: kcPrimary,
+    //   backgroundImage: AssetImage(AppImage.logo2),
+    //   //
+    // );
   }
 }

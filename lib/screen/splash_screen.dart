@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:badal/screen/tab_screen/tab_screen.dart';
-import 'package:badal/utilits/app_theme.dart';
+// import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/widgets/shared_widgets/logo_app.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kcAccent,
+      // backgroundColor: kcAccent,
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: Get.width * .16),

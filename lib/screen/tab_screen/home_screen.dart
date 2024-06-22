@@ -5,6 +5,7 @@ import 'package:badal/widgets/carousel_slider_widget.dart';
 import 'package:badal/widgets/list_category_widget.dart';
 import 'package:badal/widgets/list_product_widget.dart';
 import 'package:badal/widgets/search_with_filter.dart';
+import 'package:badal/widgets/shared_widgets/logo_app.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {

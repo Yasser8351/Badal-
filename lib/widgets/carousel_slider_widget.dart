@@ -6,9 +6,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:get/get.dart';
 import 'package:badal/controller/slider_image_controller/slider_image_controller.dart';
 import 'package:badal/utilits/all_enum.dart';
-// import 'package:badal/utilits/app/app_ui_helpers.dart';
 import 'package:badal/widgets/shared_widgets/handling_data_view.dart';
-// import 'package:badal/widgets/shared_widgets/image_app.dart';
 // import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class CarouselSliderWidget extends StatelessWidget {
@@ -52,6 +50,7 @@ class CarouselSliderWidget extends StatelessWidget {
                         //       imageUrl: ApiUrl.imageUrlTest + e.imageURL),
                         // ),
                         child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
                           child: MyImageApp(
                             image: e.imageURL,
                             width: double.infinity,
