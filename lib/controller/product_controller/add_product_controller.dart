@@ -6,6 +6,7 @@ class AddProductController extends MyController {
   String errorMessage = '';
 
   bool isNew = true;
+  bool isBadal = true;
 
   ///////////////////
 
@@ -14,8 +15,12 @@ class AddProductController extends MyController {
   @override
   changeLoadingState(LoadingState state, LoadingType loadingType) {}
 
-  selectAccountType(_isNew) {
-    isNew = _isNew;
+  selectAccountType(_isNew, WidgetType widgetType) {
+    if (widgetType == WidgetType.status) {
+      isNew = _isNew;
+    } else {
+      isBadal = _isNew;
+    }
     update();
   }
 }

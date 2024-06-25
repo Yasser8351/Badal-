@@ -48,6 +48,7 @@ class AppLocalization implements Translations {
           AppConfig.back: "رجوع",
           AppConfig.price: "السعر",
           AppConfig.phone: "الجوال",
+          AppConfig.likes: "الاعجابات",
           AppConfig.descroption: "معلومات اضافية",
           AppConfig.hidePhoneHint:
               "عند اخفاء الرقم سيتواصل معك الأعضاء عن طريق رسائل التطبيق",
@@ -82,6 +83,7 @@ class AppLocalization implements Translations {
           AppConfig.addPhoto: AppConfig.addPhoto,
           AppConfig.titleProdcut: AppConfig.titleProdcut,
           AppConfig.subCategory: AppConfig.subCategory,
+          AppConfig.likes: AppConfig.likes,
 
           AppConfig.timeOut: AppConfig.timeOut,
           AppConfig.noInternet: AppConfig.noInternet,

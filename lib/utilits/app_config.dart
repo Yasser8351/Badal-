@@ -40,6 +40,7 @@ class AppConfig {
   static const String buildNumber = "1.0.0";
   static const String termsOfServices = "Terms of service";
   static const String privacyPolicy = "Privacy Policy";
+  static const String likes = "Likes";
   static const String paymentFeesSubscriptions =
       "Payment of fees and subscriptions";
   static const String logout = "Logout";

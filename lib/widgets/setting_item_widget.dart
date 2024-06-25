@@ -24,7 +24,7 @@ class SettingItemWidget extends StatelessWidget {
             EdgeInsetsDirectional.only(start: px10, end: px10, bottom: px18),
         child: Container(
           decoration: const BoxDecoration(
-              color: kcPrimary,
+                color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(10))),
           child: Padding(
             padding: const EdgeInsetsDirectional.only(end: 20),

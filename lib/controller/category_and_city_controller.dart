@@ -22,9 +22,11 @@ class CategoryAndCityController extends MyController {
     CategoryModel(id: 0, name: "فساتين عرايس", image: AppImage.cat4),
     CategoryModel(id: 1, name: "فساتين سهرة", image: AppImage.cat3),
     CategoryModel(id: 2, name: "الاجهزة", image: AppImage.cat1),
+  ];
+  List<CategoryModel> listCategory2 = [
     CategoryModel(id: 3, name: "اكسسوارات", image: AppImage.cat2),
     CategoryModel(id: 4, name: "الشنط", image: AppImage.cat5),
-    CategoryModel(id: 5, name: "مستلزمات الأطفال", image: AppImage.cat6),
+    CategoryModel(id: 5, name: "مستلزمات  الأطفال ", image: AppImage.cat6),
   ];
   List<CategoryModel> listSubCategory = [
     CategoryModel(id: 1, name: "ملابس"),

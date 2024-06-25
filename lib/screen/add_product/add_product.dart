@@ -1,4 +1,5 @@
 import 'package:badal/controller/category_and_city_controller.dart';
+import 'package:badal/controller/product_controller/add_product_controller.dart';
 import 'package:badal/screen/fees_agrment/fees_agrment.dart';
 import 'package:badal/utilits/all_enum.dart';
 import 'package:badal/utilits/app_config.dart';
@@ -29,7 +30,8 @@ class AddProduct extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: px50,
-        title: Text(AppConfig.addProdcut.tr),
+        backgroundColor: Colors.white,
+        title: MyText.h6(AppConfig.addProdcut.tr, color: Colors.black),
       ),
       body: GetBuilder<CategoryAndCityController>(
         builder: (controller) => SingleChildScrollView(
@@ -198,7 +200,25 @@ class AddProduct extends StatelessWidget {
 
                   /// add Product Status
                   verticalSpaceRegular,
-                  const ProductStatusWidget(),
+
+                  GetBuilder<AddProductController>(
+                      builder: (controller) => ProductStatusWidget(
+                            title: "الحالة",
+                            description1: AppConfig.newProduct.tr,
+                            description2: AppConfig.used.tr,
+                            widgetType: WidgetType.status,
+                            status: controller.isNew,
+                          )),
+                  verticalSpaceRegular,
+                  GetBuilder<AddProductController>(
+                      builder: (controller) => ProductStatusWidget(
+                            title: "الخصائص",
+                            description1: "للبيع",
+                            description2: "للبدل",
+                            status: controller.isBadal,
+                            widgetType: WidgetType.type,
+                          )),
+
 /*
                   ContainerWithDecoration(
                     bottomLeft: px10,
@@ -273,8 +293,10 @@ class AddProduct extends StatelessWidget {
 
                   /// Next Page
                   MyButton(
-                    onTap: () => Get.to(() => const FeesAgrment()),
-                    text: AppConfig.next.tr,
+                    // onTap: () => Get.to(() => const FeesAgrment()),
+                    text: "نشر العرض",
+                    color: Colors.white,
+                    textColorButton: Colors.black,
                     padding: EdgeInsetsDirectional.only(
                         bottom: px50, start: px25, end: px25),
                   ),

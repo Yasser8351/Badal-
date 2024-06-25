@@ -48,6 +48,7 @@ class CategoryWidget extends GetView<AddProductController> {
                   padding: EdgeInsetsDirectional.only(
                       start: px12, end: px12, top: 8, bottom: 8),
                   categoryModel.name,
+                  textAlign: TextAlign.center,
                   fontSize: px16,
                   // color: kcPrimary,
                   color: Colors.black87,

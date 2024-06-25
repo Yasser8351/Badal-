@@ -19,6 +19,7 @@ enum ShimmerType {
 }
 
 enum LoadingType { login, none }
+enum WidgetType { status, type }
 
 enum ExpandeIndexType {
   category,
