@@ -5,6 +5,8 @@ class AppImage {
   static const cat1 = "$_root/1.jpg";
   static const cat2 = "$_root/2.jpg";
   static const cat3 = "$_root/3.jpg";
+  static const likeRed = "$_root/like_red.png";
+  static const likeBlack = "$_root/like_black.png";
   static const cat4 = "$_root/4.jpg";
   static const cat5 = "$_root/5.jpg";
   static const cat6 = "$_root/6.jpg";

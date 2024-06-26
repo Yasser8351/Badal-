@@ -2,11 +2,6 @@ import 'package:badal/utilits/app_theme.dart';
 import 'package:badal/utilits/app_ui_helpers.dart';
 import 'package:badal/widgets/shared_widgets/my_text.dart';
 import 'package:flutter/material.dart';
-// Import for Android features.
-import 'package:webview_flutter/webview_flutter.dart';
-// import 'package:webview_flutter_android/webview_flutter_android.dart';
-// Import for iOS features.
-// import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 
 class SettingItemWidget extends StatelessWidget {
   const SettingItemWidget(
@@ -24,7 +19,7 @@ class SettingItemWidget extends StatelessWidget {
             EdgeInsetsDirectional.only(start: px10, end: px10, bottom: px18),
         child: Container(
           decoration: const BoxDecoration(
-                color: Colors.white,
+              color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(10))),
           child: Padding(
             padding: const EdgeInsetsDirectional.only(end: 20),

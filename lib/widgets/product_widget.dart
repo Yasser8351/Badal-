@@ -42,7 +42,7 @@ class ProductWidget extends StatelessWidget {
             children: [
               /// Prodcut Info
               Padding(
-                padding: EdgeInsetsDirectional.only(start: 0),
+                padding: EdgeInsetsDirectional.only(start: px10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -156,8 +156,15 @@ class ProductWidget extends StatelessWidget {
 
               /// favorite
               Padding(
-                  padding: EdgeInsetsDirectional.only(top: px50, end: px25),
-                  child: Icon(Icons.favorite, color: Colors.red)),
+                padding: EdgeInsetsDirectional.only(
+                    top: Get.height * .055, end: px20),
+                child: MyImageApp(
+                  image: AppImage.likeRed,
+                  height: px32,
+                  width: px32,
+                ),
+                // child: Icon(Icons.favorite, color: Colors.red)
+              ),
 
               /// Comments
               Column(
