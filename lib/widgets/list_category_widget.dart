@@ -17,7 +17,9 @@ class ListCategoryWidget extends StatelessWidget {
             SizedBox(
               height: px100 * 2.2,
               child: Padding(
-                padding: EdgeInsets.only(top: px10),
+                padding: EdgeInsets.only(
+                  top: px10,
+                ),
                 child: SizedBox(
                   // height: px100,
                   child: Padding(

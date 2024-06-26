@@ -40,8 +40,9 @@ class ProductWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              /// Prodcut Info
               Padding(
-                padding: EdgeInsetsDirectional.only(start: px10),
+                padding: EdgeInsetsDirectional.only(start: 0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -66,7 +67,7 @@ class ProductWidget extends StatelessWidget {
                           height: Get.height * .2,
                           fit: BoxFit.fitWidth,
                           filterQuality: FilterQuality.medium,
-                          width: Get.width * .45,
+                          width: Get.width * .4,
                         ),
                       ),
                     ),
@@ -152,15 +153,20 @@ class ProductWidget extends StatelessWidget {
                   ],
                 ),
               ),
+
+              /// favorite
+              Padding(
+                  padding: EdgeInsetsDirectional.only(top: px50, end: px25),
+                  child: Icon(Icons.favorite, color: Colors.red)),
+
+              /// Comments
               Column(
-                // crossAxisAlignment: CrossAxisAlignment.center,
-                // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   MyText.h6("العروض", fontSize: px20),
                   const CustomDivider(),
                   Container(
                     // color: Colors.red,
-                    width: Get.width * .47,
+                    width: Get.width * .4,
                     child: ListView.builder(
                       shrinkWrap: true,
                       itemCount: listComment.length,

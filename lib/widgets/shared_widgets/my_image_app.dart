@@ -53,6 +53,7 @@ class MyImageApp extends StatelessWidget {
             height: height ?? px32,
           ),
           alignment: Alignment.center,
+          color: color,
           // alignment: alignment ?? AlignmentDirectional.center,
           imageUrl: image,
           placeholder: (context, url) => Center(
